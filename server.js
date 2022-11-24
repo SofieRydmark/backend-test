@@ -104,6 +104,7 @@ app.get("/", (req, res) => {
       {
         "/themes": "Show all themes.",
         "/themes/:id": "Show single theme etc..",
+        "/themes/kids": "Show all themes where kids = true",
         "/foods": "Show all foods.",
         "/decorations": "Show all decorations."
       },
