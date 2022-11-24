@@ -1,0 +1,26 @@
+ [ 
+   {
+      "name": "halloween",
+      "image": "https://jsonformatter.org/img/halloween.jpg",
+      "kids": true,
+      "grownup": true
+    },
+    {
+      "name": "djungle",
+      "image": "https://jsonformatter.org/img/djungle.jpg",
+      "kids": true,
+      "grownup": true
+    },
+    {
+      "name": "baby shower",
+      "image": "https://jsonformatter.org/img/babyShower.jpg",
+      "kids": false,
+      "grownup": true
+    },
+    {
+      "name": "after beach party",
+      "image": "https://jsonformatter.org/img/afterBeach.jpg",
+      "kids": false,
+      "grownup": true
+    }
+  ]
