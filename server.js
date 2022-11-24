@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
-// import themeData from "./data/themes.json"
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/backend-test";
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -60,6 +59,8 @@ if(process.env.RESET_DB) {
     await new Theme({ name: "djungle", image: "http://wwww.hello.com", kids: true, grownup: true }).save();
     await new Theme({ name: "baby shower", image: "http://wwww.hello.com", kids: false, grownup: true }).save();
     await new Theme({ name: "after beach", image: "http://wwww.hello.com", kids: false, grownup: true }).save();
+    await new Theme({ name: "sangria night", image: "http://wwww.hello.com", kids: false, grownup: true }).save();
+    await new Theme({ name: "movie night", image: "http://wwww.hello.com", kids: false, grownup: true }).save();
 
     await new Decoration({ name: "balloons", image: "http://wwww.hello.com", kids: true, grownup: true, belongs_to_themes: "all" }).save();
     await new Decoration({ name: "serpentine", image: "http://wwww.hello.com", kids: true, grownup: true, belongs_to_themes: "all" }).save();
@@ -148,7 +149,7 @@ app.get("/themes", async (req,res) => {
 })
 
 app.get("/themes/kids", async (req, res) => {
-  try {
+  try {e
     const themeKids = await Theme.find({ kids: true });
 
     if (themeKids) {
@@ -173,7 +174,7 @@ app.get("/themes/kids", async (req, res) => {
 
 })
 
-app.get("/foods", async (req, res) => {
+app.get("/food", async (req, res) => {
   await Food.find().then(foods => {
     res.status(200).json({
      success: true,

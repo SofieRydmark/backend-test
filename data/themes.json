@@ -22,5 +22,17 @@
       "image": "https://jsonformatter.org/img/afterBeach.jpg",
       "kids": false,
       "grownup": true
+    },
+    {
+      "name": "sangria night",
+      "image": "https://jsonformatter.org/img/afterBeach.jpg",
+      "kids": false,
+      "grownup": true
+    },
+    {
+      "name": "movie night",
+      "image": "https://jsonformatter.org/img/afterBeach.jpg",
+      "kids": false,
+      "grownup": true
     }
   ]
