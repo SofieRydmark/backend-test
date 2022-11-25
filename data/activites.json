@@ -1,0 +1,337 @@
+[
+    {
+        "name": "Truth or Dare (Scare)",
+        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "Skattjakt",
+        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "description":" Deltagarna har två koordinatsystem var, ett för att rita in och “gömma” skatter och ett för att själv gissa var kompisen har gömt sina skatter.",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": [
+            "halloween",
+            "djungle",
+            "sangria night"
+
+        ]
+      },
+      {
+        "name": "Alkoholpingis",
+        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "description":"Du behöver ett pingisbord, pingisboll, valfri alkoholdryck och pingisracket om ni inte väljer att köra med handflatorna.",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": [
+            "halloween",
+            "sangria night"
+        ]
+      },
+      {
+        "name": "Kubb",
+        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "description":"Kubb är ett klassiskt kastspel som passar att spela såväl i den egna trädgården som i parken eller på stranden",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "Ghost Stack",
+        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "description":"Stapla spökkoppar gjorda som spöken och försök slå ner dem genom att skjuta ner Nerf-vapen på 10 fots avstånd. Ge ut ett litet pris för att slå ner dem alla!",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "halloween"
+      },
+      {
+        "name": "Halloween dekorationer jakt",
+        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "description":"Gå på familjejakt för att hitta olika typer av Halloween-dekorationer",
+        "kids": true,
+        "grownup": false,
+        "belong_to_themes": "halloween"
+      },
+      {
+        "name": "Bildspel - pictionary ",
+        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "description":"Varje lag har en spelpjäs som de förflyttar över spelplanens rutor för att hålla koll på ställningen. Varje ruta indikerar med en färg eller tecken vilken typ av bild som ska ritas. Vissa rutor gör så att alla lag ska rita samma sak samtidigt, då är det laget som gissar rätt först som vinner den omgången.",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes":[
+            "halloween",
+            "zombie",
+            "sangria night",
+            "möhippa",
+            "svensexa",
+            "filmkväll",
+            "harry potter",
+            "lord of the rings",
+            "pirater",
+            "pyjamas party",
+            "star wars",
+            "pyssel och målning"
+
+        ]
+      },
+      {
+        "name": "",
+        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "",
+        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "",
+        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "",
+        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "",
+        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "",
+        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "",
+        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "",
+        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "",
+        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "",
+        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      {
+        "name": "",
+        "image": "",
+        "description":"",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      }
+]
