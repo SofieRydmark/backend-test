@@ -42,7 +42,7 @@
       "grownup": true
     },
     {
-      "name": "lord of the rings",
+      "name": "sagan om ringen",
       "image": "https://ik.imagekit.io/qzqy86it9/Themes/halloween.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1669365659833",
       "kids": true,
       "grownup": true
@@ -456,7 +456,7 @@
       "grownup": true
     },
     {
-      "name": "funny hats",
+      "name": "galna hattar",
       "image": "https://ik.imagekit.io/qzqy86it9/Themes/movienight_tafES3p3D?ik-sdk-version=javascript-1.4.3&updatedAt=1669368080418",
       "kids": true,
       "grownup": true
@@ -496,6 +496,12 @@
       "image": "https://ik.imagekit.io/qzqy86it9/Themes/movienight_tafES3p3D?ik-sdk-version=javascript-1.4.3&updatedAt=1669368080418",
       "kids": false,
       "grownup": true
+    },
+    {
+      "name": "greta gris",
+      "image": "https://ik.imagekit.io/qzqy86it9/Themes/movienight_tafES3p3D?ik-sdk-version=javascript-1.4.3&updatedAt=1669368080418",
+      "kids": true,
+      "grownup": false
     }
   ]
   

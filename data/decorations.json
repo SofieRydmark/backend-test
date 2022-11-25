@@ -1,45 +1,372 @@
 [ 
     {
-       "name": "ballons",
+       "name": "ballonger",
        "image": "https://jsonformatter.org/img/balloons.jpg",
        "kids": true,
        "grownup": true,
        "belong_to_themes": "all"
      },
      {
-       "name": "serpentine",
+      "name": "party hattar",
+      "image": "https://jsonformatter.org/img/balloons.jpg",
+      "kids": true,
+      "grownup": true,
+      "belong_to_themes": "all"
+    },
+     {
+      "name": "ballongbåge",
+      "image": "https://jsonformatter.org/img/diaper cake.jpg",
+      "kids": true,
+      "grownup": true,
+      "belong_to_themes": "all" 
+    },
+    {
+      "name": "ballongställ",
+      "image": "https://jsonformatter.org/img/diaper cake.jpg",
+      "kids": true,
+      "grownup": true,
+      "belong_to_themes": "all" 
+    },
+    {
+      "name": "sifferballonger",
+      "image": "https://jsonformatter.org/img/diaper cake.jpg",
+      "kids": true,
+      "grownup": true,
+      "belong_to_themes": "all" 
+    },
+     {
+       "name": "serpentiner",
        "image": "https://jsonformatter.org/img/serpentine.jpg",
        "kids": true,
        "grownup": true,
        "belong_to_themes": "all"
      },
      {
-        "name": "confetti",
+      "name": "honey combs",
+      "image": "https://jsonformatter.org/img/serpentine.jpg",
+      "kids": true,
+      "grownup": true,
+      "belong_to_themes": "all"
+    },
+     {
+        "name": "konfetti",
         "image": "https://jsonformatter.org/img/confetti.jpg",
         "kids": true,
         "grownup": true,
         "belong_to_themes": "all"
       },
       {
-        "name": "animal balloons",
+        "name": "konfettikanon",
+        "image": "https://jsonformatter.org/img/confetti.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "konfettipopper",
+        "image": "https://jsonformatter.org/img/confetti.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "djurballonger",
         "image": "https://jsonformatter.org/img/animalBalloons.jpg",
         "kids": true,
         "grownup": false,
-        "belong_to_themes": "djungle, baby shower"
+        "belong_to_themes": ["djungel", "baby shower"]
       },
       {
         "name": "pom poms",
         "image": "https://jsonformatter.org/img/pompoms.jpg",
         "kids": true,
         "grownup": true,
-        "belong_to_themes": "baby shower, wedding"
+        "belong_to_themes": ["baby shower", "pyjamas party", "pyssel och målning", "festival"]
       },
       {
-        "name": "diaper cake",
+        "name": "blöjtårta",
         "image": "https://jsonformatter.org/img/diaper cake.jpg",
         "kids": true,
         "grownup": true,
-        "belong_to_themes": "baby shower"
+        "belong_to_themes": ["baby shower"]
+      },
+      {
+        "name": "foto backdrop",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "sand",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": ["beach party", "around the world", "magisk trädgård", "las vegas baby", "trädgårds BBQ", "arabiska nätter", "picknick", "djungel", "jurassic park"]
+      },
+      {
+        "name": "kritor och penslar",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": false,
+        "belong_to_themes": "pyssel och målning"
+      },
+      {
+        "name": "målarfärg",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "pyssel och målning"
+      },
+      {
+        "name": "pärlor",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": false,
+        "belong_to_themes": ["pyssel och målning", "barbie", "magisk trädgård", "sagolandet"]
+      },
+      {
+        "name": "tråd",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "pyssel och målning"
+      },
+      {
+        "name": "pärlplattor",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": false,
+        "belong_to_themes": "pyssel och målning"
+      },
+      {
+        "name": "glitterdraperi",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": ["beach party", "around the world", "magisk trädgård", "las vegas baby", "casino", "arabiska nätter", "hollywood", "disco", "baby shower", "möhippa", "svensexa", "sagolandet", 
+        "cirkus", "karaoke", "pimps n hoes", "gameshow", "overdressed", "talangjakt", "vinter wonderland", "maskeradbal", "röda mattan", "coctail party", "studio 54", "barbie", "kärlek", "burlesque", "bollywood", "kända par"]
+      },
+      {
+        "name": "vaxduk",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "självlysnade armband",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "uppblåsbara djur",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": ["djungel", "jurassic park", "magisk trädgård", "sagolandet", "galna hattar", "grill och chill", 
+        "trädgårds BBQ", "st patricks day", "anime", "maskeradbal", "vinter wonderland", "around the world", "paw patrol"]
+      },
+      {
+        "name": "trollstavar",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": ["harry potter", "sagan om ringen", "magisk trädgård", "sagolandet", "maskeradbal"]
+      },
+      {
+        "name": "glitter",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "vimplar",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "namnskyltar",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "party poppers",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": false,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "spindlar i plast",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": ["djungel", "magisk trädgård", "sagolandet", "halloween", "pirater", "vilda västern", "möhippa", "svensexa"]
+      },
+      {
+        "name": "hängande spöken",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": ["djungel", "magisk trädgård", "sagolandet", "halloween", "pirater", "vilda västern", "möhippa", "svensexa"]
+      },
+      {
+        "name": "låtsasblod",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": ["halloween", "pirater", "vilda västern", "möhippa", "svensexa"]
+      },
+      {
+        "name": "pinata",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": ["cinco de mayo", "mexikansk fiesta", "möhippa", "svensexa", "baby shower", "grill och chill", "trädgårds BBQ"]
+      },
+      {
+        "name": "rosenblad",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "tårtljus",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "plastmuggar",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "girlanger",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "girlang baby",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": "babyshower"
+      },
+      {
+        "name": "karaoke mikrofoner",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "karaoke"
+      },
+      {
+        "name": "barnsaxar",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": false,
+        "belong_to_themes": "pyssel och målning"
+      },
+      {
+        "name": "etiketter",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "konstgjorda växter",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": ["grill och chill", "trädgårds BBQ", "djungel", "sagolandet", "vinter wonderland", "vilda västern", "festival", "sagan om ringen", "harry potter", "pirater", "jurassic park"]
+      },
+      {
+        "name": "pumpor",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "halloween"
+      },
+      {
+        "name": "piprensare",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": false,
+        "belong_to_themes": "pyssel och målning"
+      },
+      {
+        "name": "konstgjord snö",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": ["grill och chill", "trädgårds BBQ", "djungel", "sagolandet", "vinter wonderland", "sagan om ringen", "harry potter", "frozen", "oktoberfest", "din värsta mardröm", "sci-fi", "ugly sweater"]
+      },
+      {
+        "name": "coctailpinnar",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "spindelnät",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": ["halloween", "djungel", "sagolandet", "vinter wonderland", "vilda västern", "sagan om ringen", "harry potter", "pirater", "jurassic park"]
+      },
+      {
+        "name": "fladdermöss",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": ["halloween", "djungel", "sagolandet", "vinter wonderland", "sagan om ringen", "harry potter", "pirater", "jurassic park"]
+      },
+      {
+        "name": "marschaller",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "flamingo",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": ["pool party", "djungel", "sagolandet"]
+      },
+      {
+        "name": "shotglas i plast",
+        "image": "https://jsonformatter.org/img/diaper cake.jpg",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": "all"
       }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
    ]
  

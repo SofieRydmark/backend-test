@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import themeData from './data/themes.json'
+import decorations from './data/decorations.json'
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/backend-test";
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -23,7 +24,7 @@ const Decoration = mongoose.model("Decoration", {
   image: String,
   kids: Boolean,
   grownup: Boolean,
-  belongs_to_themes: String
+  belongs_to_themes: [String]
 })
 
 const Food = mongoose.model("Food", {
@@ -53,9 +54,15 @@ const Activity = mongoose.model("Activity", {
 if(process.env.RESET_DB) {
   const seedDataBase = async () => {
     await Theme.deleteMany(); 
+    await Decoration.deleteMany(); 
+
     themeData.forEach(singleTheme => {
       const newTheme = new Theme(singleTheme);
       newTheme.save();
+    })
+    decorations.forEach(singleDecor => {
+      const newDecoration = new Decoration(singleDecor);
+      newDecoration.save();
     })
     // await Decoration.deleteMany(); 
     // await Food.deleteMany(); 
