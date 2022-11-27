@@ -1,7 +1,7 @@
 [
     {
         "name": "Truth or Dare (Scare)",
-        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "image": "",
         "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
         "kids": true,
         "grownup": true,
@@ -9,7 +9,7 @@
       },
       {
         "name": "Skattjakt",
-        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "image": "",
         "description":" Deltagarna har två koordinatsystem var, ett för att rita in och “gömma” skatter och ett för att själv gissa var kompisen har gömt sina skatter.",
         "kids": true,
         "grownup": true,
@@ -22,26 +22,28 @@
       },
       {
         "name": "Alkoholpingis",
-        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "image": "",
         "description":"Du behöver ett pingisbord, pingisboll, valfri alkoholdryck och pingisracket om ni inte väljer att köra med handflatorna.",
         "kids": false,
         "grownup": true,
         "belong_to_themes": [
             "halloween",
-            "sangria night"
+            "sangria night",
+            "möhippa",
+            "svensexa"
         ]
       },
       {
         "name": "Kubb",
-        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "image": "",
         "description":"Kubb är ett klassiskt kastspel som passar att spela såväl i den egna trädgården som i parken eller på stranden",
         "kids": true,
         "grownup": true,
         "belong_to_themes": "all"
       },
       {
-        "name": "Ghost Stack",
-        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "name": "Spökkoppar",
+        "image": "",
         "description":"Stapla spökkoppar gjorda som spöken och försök slå ner dem genom att skjuta ner Nerf-vapen på 10 fots avstånd. Ge ut ett litet pris för att slå ner dem alla!",
         "kids": true,
         "grownup": true,
@@ -49,7 +51,7 @@
       },
       {
         "name": "Halloween dekorationer jakt",
-        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "image": "",
         "description":"Gå på familjejakt för att hitta olika typer av Halloween-dekorationer",
         "kids": true,
         "grownup": false,
@@ -57,7 +59,7 @@
       },
       {
         "name": "Bildspel - pictionary ",
-        "image": "https://jsonformatter.org/img/balloons.jpg",
+        "image": "",
         "description":"Varje lag har en spelpjäs som de förflyttar över spelplanens rutor för att hålla koll på ställningen. Varje ruta indikerar med en färg eller tecken vilken typ av bild som ska ritas. Vissa rutor gör så att alla lag ska rita samma sak samtidigt, då är det laget som gissar rätt först som vinner den omgången.",
         "kids": true,
         "grownup": true,
@@ -73,86 +75,168 @@
             "pirater",
             "pyjamas party",
             "star wars",
-            "pyssel och målning"
+            "pyssel och målning",
+            "brädspels-turnering"
+        ]
+      },
+      {
+        "name": "Trivia",
+        "image": "",
+        "description":" Spelet Trivia är ett favoritspel som vanligtvis spelas på barer och pubar över hela världen. Du kan spela trivia online, eller köpa kort med frågor. Det finns många olika ämne som man kan välja från t ex sport, film, kändisar och m.m",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": [
+          "filmkväll",
+          "harry potter",
+          "sagan om ringen",
+          "pyjamas party",
+          "star wars",
+          "jurassic park",
+          "marvel avengers",
+          "game of thrones",
+          "rockstars",
+          "90s disco",
+          "80s disco",
+          "sci-fi",
+          "kända par"
+        ] 
+      },
+      {
+        "name": "Kostymtävling",
+        "image": "",
+        "description":"Välja ämne och förbered kostym för festen. Under kvällen välj bäst kostym och vinare.",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": [
+          "filmkväll",
+          "harry potter",
+          "sagan om ringen",
+          "pyjamas party",
+          "star wars",
+          "jurassic park",
+          "marvel avengers",
+          "sagolandet",
+          "monster",
+          "turtles",
+          "pippi långstrump",
+          "game of thrones",
+          "rockstars",
+          "90s disco",
+          "80s disco",
+          "sci-fi",
+          "yttre rymden",
+          "pirater",
+          "kända par",
+          "vilda västern",
+          "gangsters",
+          "bollywood",
+          "galna hattar",
+          "crazy hair",
+          "ugly bridesmaids",
+          "din värsta mardröm",
+          "arabiska nätter",
+          "barbie",
+          "st patricks day",
+          "anime",
+          "ugly sweater",
+          "maskeradbal",
+          "vinter wonderland",
+          "detektiv & gåtor",
+          "hippies",
+          "zombies",
+          "hollywood glam",
+          "frozen",
+          "paw patrol",
 
+
+          ] 
+      },
+      {
+        "name": "Poker turnering",
+        "image": "",
+        "description":"",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes":[
+          "casino",
+          "pokerkväll",
+          "black & white",
+          "overdressed",
+          "röda mattan",
+          "las vegas baby"
+        ]
+      },
+      {
+        "name": "Dans med ballong",
+        "image": "",
+        "description":"Välj din dans partner och lägg balong mellan er. Paar som dansar längst utan att tappa balong vinner",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": [
+          "halloween",
+          "festival",
+          "karnival",
+          "90s disco",
+          "80s disco",
+          "disco"
+        ]
+      },
+      {
+        "name": "Brädspellsmarathon",
+        "image": "",
+        "description":"Välj några brädspel som ni ska spela, läsa reglerna och bjud kompisar för många roliga timmar med favorita brädspel",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": [
+          "harry potter",
+          "sagan om ringen",
+          "pyjamas party",
+          "star wars",
+          "jurassic park",
+          "marvel avengers",
+          "game of thrones",
+          "sci-fi",
+          "zombies",
+          "brädspels-turnering"
+          
         ]
       },
       {
         "name": "",
-        "image": "https://jsonformatter.org/img/balloons.jpg",
-        "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
+        "image": "",
+        "description":"",
         "kids": true,
         "grownup": true,
         "belong_to_themes": "all"
       },
       {
         "name": "",
-        "image": "https://jsonformatter.org/img/balloons.jpg",
-        "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
+        "image": "",
+        "description":"",
         "kids": true,
         "grownup": true,
         "belong_to_themes": "all"
       },
       {
         "name": "",
-        "image": "https://jsonformatter.org/img/balloons.jpg",
-        "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
+        "image": "",
+        "description":"",
         "kids": true,
         "grownup": true,
         "belong_to_themes": "all"
       },
       {
         "name": "",
-        "image": "https://jsonformatter.org/img/balloons.jpg",
-        "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
+        "image": "",
+        "description":"",
         "kids": true,
         "grownup": true,
         "belong_to_themes": "all"
       },
       {
         "name": "",
-        "image": "https://jsonformatter.org/img/balloons.jpg",
-        "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },
-      {
-        "name": "",
-        "image": "https://jsonformatter.org/img/balloons.jpg",
-        "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },
-      {
-        "name": "",
-        "image": "https://jsonformatter.org/img/balloons.jpg",
-        "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },
-      {
-        "name": "",
-        "image": "https://jsonformatter.org/img/balloons.jpg",
-        "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },
-      {
-        "name": "",
-        "image": "https://jsonformatter.org/img/balloons.jpg",
-        "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },
-      {
-        "name": "",
-        "image": "https://jsonformatter.org/img/balloons.jpg",
-        "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
+        "image": "",
+        "description":"",
         "kids": true,
         "grownup": true,
         "belong_to_themes": "all"
