@@ -1,6 +1,8 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
+import themeData from './data/themes.json'
+import decorations from './data/decorations.json'
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/backend-test";
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -22,7 +24,7 @@ const Decoration = mongoose.model("Decoration", {
   image: String,
   kids: Boolean,
   grownup: Boolean,
-  belongs_to_themes: String
+  belongs_to_themes: [String]
 })
 
 const Food = mongoose.model("Food", {
@@ -53,29 +55,22 @@ if(process.env.RESET_DB) {
   const seedDataBase = async () => {
     await Theme.deleteMany(); 
     await Decoration.deleteMany(); 
-    await Food.deleteMany(); 
 
-    await new Theme({ name: "halloween", image: "http://wwww.hello.com", kids: true, grownup: true }).save();
-    await new Theme({ name: "djungle", image: "http://wwww.hello.com", kids: true, grownup: true }).save();
-    await new Theme({ name: "baby shower", image: "http://wwww.hello.com", kids: false, grownup: true }).save();
-    await new Theme({ name: "after beach", image: "http://wwww.hello.com", kids: false, grownup: true }).save();
-    await new Theme({ name: "sangria night", image: "http://wwww.hello.com", kids: false, grownup: true }).save();
-    await new Theme({ name: "movie night", image: "http://wwww.hello.com", kids: false, grownup: true }).save();
+    themeData.forEach(singleTheme => {
+      const newTheme = new Theme(singleTheme);
+      newTheme.save();
+    })
+    decorations.forEach(singleDecor => {
+      const newDecoration = new Decoration(singleDecor);
+      newDecoration.save();
+    })
+    // await Decoration.deleteMany(); 
+    // await Food.deleteMany(); 
 
+    /* await new Theme({ name: "halloween", image: "http://wwww.hello.com", kids: true, grownup: true }).save();
     await new Decoration({ name: "balloons", image: "http://wwww.hello.com", kids: true, grownup: true, belongs_to_themes: "all" }).save();
-    await new Decoration({ name: "serpentine", image: "http://wwww.hello.com", kids: true, grownup: true, belongs_to_themes: "all" }).save();
-    await new Decoration({ name: "animal balloons", image: "http://wwww.hello.com", kids: true, grownup: true, belongs_to_themes: "djungle" }).save();
-    await new Decoration({ name: "pom poms", image: "http://wwww.hello.com", kids: true, grownup: true, belongs_to_themes: "all" }).save();
-    await new Decoration({ name: "diaper cake", image: "http://wwww.hello.com", kids: false, grownup: true, belongs_to_themes: "baby shower" }).save();
+    await new Food({ name: "cupcakes", image: "http://wwww.hello.com", kids: true, grownup: true, belongs_to_themes: "all" }).save(); */
 
-    await new Food({ name: "cupcakes", image: "http://wwww.hello.com", kids: true, grownup: true, belongs_to_themes: "all" }).save();
-    await new Food({ name: "hotdogs", image: "http://wwww.hello.com", kids: true, grownup: true, belongs_to_themes: "all" }).save();
-    await new Food({ name: "sliders", image: "http://wwww.hello.com", kids: true, grownup: true, belongs_to_themes: "all" }).save();
-    await new Food({ name: "pizza", image: "http://wwww.hello.com", kids: true, grownup: true, belongs_to_themes: "all" }).save();
-    await new Food({ name: "candy", image: "http://wwww.hello.com", kids: true, grownup: true, belongs_to_themes: "all" }).save();
-    await new Food({ name: "chips", image: "http://wwww.hello.com", kids: true, grownup: true, belongs_to_themes: "all" }).save();
-    await new Food({ name: "tapas", image: "http://wwww.hello.com", kids: true, grownup: true, belongs_to_themes: "sangria night" }).save();
-    await new Food({ name: "ice cream", image: "http://wwww.hello.com", kids: true, grownup: true, belongs_to_themes: "all" }).save();
   }
   seedDataBase();
 }
