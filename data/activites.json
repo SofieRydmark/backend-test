@@ -393,13 +393,164 @@
         ]
       },
       {
-        "name": "",
+        "name": "Dansstopp",
         "image": "",
-        "description":"",
+        "description":"Förbered en mindre stol än spelare cch välj musik. Människor dansar runt stolar och när det är stop på music, person som kan inte sitta på stol hoppar av, fortsätt tills alla stolar är borta, sista person vinner. ",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": [
+          "halloween",
+          "festival",
+          "karnival",
+          "90s disco",
+          "80s disco",
+          "disco",
+          "paw patrol",
+          "pippi långstrump",
+          "pirater",
+          "barbie",
+          "arabiska nätter"
+        ]
+      },
+      {
+        "name": "Gör ditt eget klänning till din docka",
+        "image": "",
+        "description":"Förbered: papper, tygrester, sax, tejp, nålar, trådar. Välj material som ska passa till barn ålder och låt dem göra eget klänning till docka. ",
+        "kids": true,
+        "grownup": false,
+        "belong_to_themes": [
+          "pyssel och målning",
+          "barbie"
+        ]
+      },     
+      {
+        "name": "Målning tävling",
+        "image": "",
+        "description":"Välj ämne och måla ditt egen tavla",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "pyssel och målning"
+      },     
+      {
+        "name": "Förbered din egen mask",
+        "image": "",
+        "description":"Förbered: papper, tygrester, sax och allt som behövs till att göra mask",
         "kids": true,
         "grownup": true,
         "belong_to_themes": "all"
-      },
+      },      
+      {
+        "name": "Gå på plankan",
+        "image": "",
+        "description":"Förbered en planka och några block. Spika fast plankan på de små blocken, men se till att den är stadig. Håll plankan bara några centimeter från marken för att undvika olyckor. Efter att plankan har satts kan du antingen använda en liten uppblåsbar pool eller en blå presenning att lägga under plankan för att ge den `hav` vibe. Nu, för att börja det roliga, låt alla stå i kö. Den som faller i poolen eller presenningen förlorar.",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "pirater"
+      },      
+      {
+        "name": "Golvet är lava",
+        "image": "",
+        "description":"Alla står på golvet när musik spelar, när music är tyst behöver man hoppa på något övanför golvet då golvet blir lava. Sista person hoppar av spel, spelar fram till det är bara en person kvar. ",
+        "kids": true,
+        "grownup": false,
+        "belong_to_themes": [
+          "halloween",
+          "möhippa",
+          "svensexa",
+          "filmkväll",
+          "sci-fi",
+          "vilda västern",
+          "pyjamas party",
+          "festival",
+          "karnival",
+          "karaoke",
+          "rockstars",
+          "80s disco",
+          "90s disco",
+          "disco",
+          "spa-dag",
+          "pimps n hoes",
+          "hollywood glam",
+          "around the world",
+          "black & white",
+          "overdressed",
+          "magisk trädgård",
+          "vinter wonderland",
+          "maskeradbal",
+          "röda mattan",
+          "las vegas baby",
+          "pokerkväll",
+          "casino",
+          "speed dating/matchmaking",
+          "trädgprds BBQ",
+          "coctail party",
+          "kärlek"
+        ]
+      },      
+      {
+        "name": "Kanonbollskastning - boule",
+        "image": "",
+        "description":"Spelet börjar med att man lottar om vem som ska kasta lillen. En spelare i det lag som vann lotten ritar en ring i gruset och kastar ut lillen mellan 6 och 10 meter. Omgången spelas sedan från denna ring, och det är det lag som inte är närmast lillen som spelar nästa klot. I vilken ordning man spelar sina klot inom laget avgör man själv",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": [
+          "pirater",
+          "djungel"
+        ]
+      },      
+      {
+        "name": "Boule Match",
+        "image": "",
+        "description":"Spelet börjar med att man lottar om vem som ska kasta lillen. En spelare i det lag som vann lotten ritar en ring i gruset och kastar ut lillen mellan 6 och 10 meter. Omgången spelas sedan från denna ring, och det är det lag som inte är närmast lillen som spelar nästa klot. I vilken ordning man spelar sina klot inom laget avgör man själv",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": [
+          "sportfest",
+          "bowling",
+          "trädgprds BBQ",
+          "ugly sweater",
+          "brunch",
+          "grill & chill",
+          "picknick",
+          "oktoberfest"
+        ]
+      },      
+      {
+        "name": "Lego city",
+        "image": "",
+        "description":"Vem ska bygga högst byggnad i staden? Förbered olika legoklossar och låt barnen bygga eget stad.",
+        "kids": true,
+        "grownup": false,
+        "belong_to_themes": "all"
+      },     
+      {
+        "name": "Beauty night - treatment",
+        "image": "",
+        "description":"Välj vilket ritual ska ni göra och förbered alla kosmetiker som behövs. Glöm inte om avslapnade musik och ljus. ",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": [
+          "möhippa",
+          "pyjamas party",
+          "spa-dag"
+        ]
+      },      
+      {
+        "name": "Quidditch match",
+        "image": "",
+        "description": "Förbered 3 bollar (handboll x 2 och en lite ball), kvastskaft till alla spelare och vinna din första Quidditch",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "harry potter"
+      },      
+      {
+        "name": "UNO spel",
+        "image": "",
+        "description":"Du behöver att köpa spel. Målet är att bli av med alla kort men för att kunna spela ut det sista kortet måste du komma ihåg att skrika ”UNO!” så fort du blir av med ditt näst sista kort. Om en spelare glömmer bort att säga UNO måste denne dra två kort från korthögen. Denne behöver även stå över sin tur.",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },      
       {
         "name": "",
         "image": "",
@@ -407,161 +558,96 @@
         "kids": true,
         "grownup": true,
         "belong_to_themes": "all"
-      },      {
+      },      
+      {
         "name": "",
         "image": "",
         "description":"",
         "kids": true,
         "grownup": true,
         "belong_to_themes": "all"
-      },      {
+      },      
+      {
         "name": "",
         "image": "",
         "description":"",
         "kids": true,
         "grownup": true,
         "belong_to_themes": "all"
-      },      {
+      },      
+      {
         "name": "",
         "image": "",
         "description":"",
         "kids": true,
         "grownup": true,
         "belong_to_themes": "all"
-      },      {
+      },      
+      {
         "name": "",
         "image": "",
         "description":"",
         "kids": true,
         "grownup": true,
         "belong_to_themes": "all"
-      },      {
+      },      
+      {
         "name": "",
         "image": "",
         "description":"",
         "kids": true,
         "grownup": true,
         "belong_to_themes": "all"
-      },      {
+      },      
+      {
         "name": "",
         "image": "",
         "description":"",
         "kids": true,
         "grownup": true,
         "belong_to_themes": "all"
-      },      {
+      },      
+      {
         "name": "",
         "image": "",
         "description":"",
         "kids": true,
         "grownup": true,
         "belong_to_themes": "all"
-      },      {
+      },      
+      {
         "name": "",
         "image": "",
         "description":"",
         "kids": true,
         "grownup": true,
         "belong_to_themes": "all"
-      },      {
+      },      
+      {
         "name": "",
         "image": "",
         "description":"",
         "kids": true,
         "grownup": true,
         "belong_to_themes": "all"
-      },      {
+      },      
+      {
         "name": "",
         "image": "",
         "description":"",
         "kids": true,
         "grownup": true,
         "belong_to_themes": "all"
-      },      {
+      },      
+      {
         "name": "",
         "image": "",
         "description":"",
         "kids": true,
         "grownup": true,
         "belong_to_themes": "all"
-      },      {
-        "name": "",
-        "image": "",
-        "description":"",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },      {
-        "name": "",
-        "image": "",
-        "description":"",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },      {
-        "name": "",
-        "image": "",
-        "description":"",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },      {
-        "name": "",
-        "image": "",
-        "description":"",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },      {
-        "name": "",
-        "image": "",
-        "description":"",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },      {
-        "name": "",
-        "image": "",
-        "description":"",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },      {
-        "name": "",
-        "image": "",
-        "description":"",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },      {
-        "name": "",
-        "image": "",
-        "description":"",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },      {
-        "name": "",
-        "image": "",
-        "description":"",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },      {
-        "name": "",
-        "image": "",
-        "description":"",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },      {
-        "name": "",
-        "image": "",
-        "description":"",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },      {
+      },      
+      {
         "name": "",
         "image": "",
         "description":"",
