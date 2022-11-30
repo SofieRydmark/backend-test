@@ -21,9 +21,16 @@
         "belong_to_themes": "all"
       },
       {
-        "name": "Bubblevatten",
+        "name": "Alkoholfri Cider",
         "image": "",
-        "kids": true,
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "Cider",
+        "image": "",
+        "kids": false,
         "grownup": true,
         "belong_to_themes": "all"
       },
@@ -99,6 +106,13 @@
       },
       {
         "name": "Mojito",
+        "image": "",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+        "name": "Gin Tonic",
         "image": "",
         "kids": false,
         "grownup": true,
@@ -377,18 +391,11 @@
         "belong_to_themes": "Svensexa"
       },
       {
-        "name": "Mojito",
-        "image": "",
-        "kids": false,
-        "grownup": true,
-        "belong_to_themes": "Svensexa"
-      },
-      {
         "name": "Wiskey Sour",
         "image": "",
         "kids": false,
         "grownup": true,
-        "belong_to_themes": "Svensexa"
+        "belong_to_themes": "all"
       },
       {
         "name": "Vodka redbull",
@@ -410,13 +417,6 @@
         "kids": false,
         "grownup": true,
         "belong_to_themes": "Svensexa"
-      },
-      {
-        "name": "Varm choklad med grädde",
-        "image": "",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "Filmkväll"
       },
       {
         "name": "Varm choklad med grädde",
@@ -475,7 +475,7 @@
         "belong_to_themes": "all"
       },
       {
-        "name": "Mockatil Jordgubbslimonad",
+        "name": "Mockatil Jordgubbslemonad",
         "image": "",
         "kids": true,
         "grownup": true,
@@ -489,10 +489,17 @@
         "belong_to_themes": "all"
       },
       {
+        "name": "Frukt Bål med alkohol",
+        "image": "",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
         "name": "Frukt Bål",
         "image": "",
         "kids": true,
-        "grownup": false,
+        "grownup": true,
         "belong_to_themes": "all"
       },
       {
@@ -515,6 +522,90 @@
         "kids": true,
         "grownup": false,
         "belong_to_themes": "Halloween"
+      },
+      {
+        "name": "Captain Jack ",
+        "image": "",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": "Pirat"
+      },
+      {
+        "name": "Free the sparrow",
+        "image": "",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": "Pirat"
+      },
+      {
+        "name": "Shipwrecked",
+        "image": "",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": "Pirat"
+      },
+      {
+        "name": "Mockatil Pirate punch",
+        "image": "",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "Pirat"
+      },
+      {
+        "name": "Cowboy Cocktail",
+        "image": "",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": "Vilda västern"
+      },
+      {
+        "name": "Wild wild west Cocktail",
+        "image": "",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": "Vilda västern"
+      },
+      {
+        "name": "Tiramisu Martini",
+        "image": "",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": "Pyjamas party"
+      },
+      {
+        "name": "Cinnamon Roll Cocktail",
+        "image": "",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": "Pyjamas party"
+      },
+      {
+        "name": "Varm choklad med grädde och mini mashmallows",
+        "image": "",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "Pyjamas party"
+      },
+      {
+        "name": "Death star cocktail",
+        "image": "",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": "Star wars"
+      },
+      {
+        "name": "Mimosas",
+        "image": "",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": "Brunch"
+      },
+      {
+        "name": "Mimosas Mocktail",
+        "image": "",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": "Brunch"
       }
       
       
