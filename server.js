@@ -99,8 +99,9 @@ app.get("/", (req, res) => {
     Routes: [
       {
         "/themes": "Show all themes.",
-        "/themes/:id": "Show single theme etc..",
-        "/themes/kids": "Show all themes where kids = true",
+        "/themes/:id": "Show single theme by id",
+        "/themes/type/kids": "Show all themes where kids = true",
+        "/themes/type/grownups": "Show all themes where grownup = true",
         "/foods": "Show all foods.",
         "/decorations": "Show all decorations."
       },
