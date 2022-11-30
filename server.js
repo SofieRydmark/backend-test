@@ -143,8 +143,8 @@ app.get("/themes", async (req,res) => {
 
 })
 
-app.get("/themes/kids", async (req, res) => {
-  try {e
+app.get("/themes/type/kids", async (req, res) => {
+  try {
     const themeKids = await Theme.find({ kids: true });
 
     if (themeKids) {
@@ -166,7 +166,31 @@ app.get("/themes/kids", async (req, res) => {
       error: "Invalid route" 
     })
   }
+})
 
+app.get("/themes/type/grownup", async (req, res) => {  
+  try {
+    const themeKids = await Theme.find({ grownup: true });
+
+    if (themeKids) {
+      res.status(200).json({
+      success: true,
+      theme: themeKids
+    })
+    } else {
+      res.status(404).json({
+        success: false,
+        status_code: 404,
+        error: `not found`
+    })
+    }
+  } catch (err) {
+    res.status(400).json({ 
+      success: false,
+      status_code: 400,
+      error: "Invalid route" 
+    })
+  }
 })
 
 app.get("/food", async (req, res) => {
