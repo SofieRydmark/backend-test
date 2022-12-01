@@ -7,14 +7,14 @@
        "belong_to_themes": "all"
      },
      {
-       "name": "hotdogs",
+       "name": "Varmkorv med bröd",
        "image": "https://jsonformatter.org/jpg",
        "kids": true,
        "grownup": true,
        "belong_to_themes": "all"
      },
      {
-        "name": "sliders",
+        "name": "Snittar",
         "image": "https://jsonformatter.org/jpg",
         "kids": true,
         "grownup": true,
@@ -28,7 +28,7 @@
         "belong_to_themes": "djungle, baby shower"
       },
       {
-        "name": "candy",
+        "name": "Godis",
         "image": "https://jsonformatter.org/jpg",
         "kids": true,
         "grownup": true,
@@ -49,11 +49,214 @@
         "belong_to_themes": "sangria night"
       },
       {
-        "name": "ice cream",
+        "name": "Glass",
         "image": "https://jsonformatter.org/jpg",
         "kids": true,
         "grownup": true,
         "belong_to_themes": "all"
-      }
+      },
+       {
+        "name": "Popcorn",
+        "image": "https://jsonformatter.org/jpg",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "all"
+      },
+      {
+       "name": "Tacos",
+       "image": "https://jsonformatter.org/jpg",
+       "kids": true,
+       "grownup": true,
+       "belong_to_themes": "all"
+     },
+     {
+      "name": "Nachos med dipp",
+      "image": "https://jsonformatter.org/jpg",
+      "kids": true,
+      "grownup": true,
+      "belong_to_themes": "all"
+      },
+     {
+      "name": "Tårta",
+      "image": "https://jsonformatter.org/jpg",
+      "kids": true,
+      "grownup": true,
+      "belong_to_themes": "all"
+      },
+      {
+     "name": "Grillspett",
+     "image": "https://jsonformatter.org/jpg",
+     "kids": true,
+     "grownup": true,
+     "belong_to_themes": ["trägårds BBQ", "grill & chill" ]
+     },
+     {
+    "name": "Skaldjurs buffe",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": false,
+    "grownup": true,
+    "belong_to_themes": ["overdressed", "maskeradbal","las vegas baby", "cocktail party" ]
+     },
+    {
+    "name": "Hamburgare",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": true,
+    "grownup": true,
+    "belong_to_themes": "all"
+   },
+   {
+    "name": "Choklad fontän",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": true,
+    "grownup": true,
+    "belong_to_themes": "all"
+   },
+   {
+    "name": "Kakor",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": true,
+    "grownup": true,
+    "belong_to_themes": "all"
+   },
+   {
+    "name": "Kanderade äpplen ",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": true,
+    "grownup": true,
+    "belong_to_themes": "winter wonderland"
+   },
+   {
+    "name": "Pannkakor",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": true,
+    "grownup": true,
+    "belong_to_themes": ["brunch", "babyshower", "möhippa", "svensexa"]
+   },
+   {
+    "name": "Pommes",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": true,
+    "grownup": true,
+    "belong_to_themes": "all"
+   },
+   {
+    "name": "Toast",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": true,
+    "grownup": true,
+    "belong_to_themes": "Piknick"
+   },
+   {
+    "name": "Sallad",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": false,
+    "grownup": true,
+    "belong_to_themes": "all"
+   },
+   {
+    "name": "Bröd",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": false,
+    "grownup": true,
+    "belong_to_themes": "all"
+   },
+   {
+    "name": "Ost bricka",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": false,
+    "grownup": true,
+    "belong_to_themes": "all"
+   },
+   {
+    "name": "Chark bricka",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": false,
+    "grownup": true,
+    "belong_to_themes": "all"
+   },
+   {
+    "name": "Godis bricka",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": true,
+    "grownup": false,
+    "belong_to_themes": "all"
+   },
+   {
+    "name": "Nötter",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": false,
+    "grownup": true,
+    "belong_to_themes": "all"
+   },
+   {
+    "name": "Oliver",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": false,
+    "grownup": true,
+    "belong_to_themes": "all"
+   },
+   {
+    "name": "Wraps",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": true,
+    "grownup": true,
+    "belong_to_themes": "all"
+   },
+   {
+    "name": "Potatis sallad",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": true,
+    "grownup": true,
+    "belong_to_themes": "all"
+   },
+   {
+    "name": "Bakad potatis med tillbehör",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": false,
+    "grownup": true,
+    "belong_to_themes": "all"
+   },
+   {
+    "name": "Sushi",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": false,
+    "grownup": true,
+    "belong_to_themes": "all"
+   },
+   {
+    "name": "Våfflor med tillbehör",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": true,
+    "grownup": false,
+    "belong_to_themes": "all"
+   },
+   {
+    "name": "Marängsviss",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": true,
+    "grownup": false,
+    "belong_to_themes": "all"
+   },
+   {
+    "name": "Cheescake",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": true,
+    "grownup": true,
+    "belong_to_themes": "all"
+   },
+   {
+    "name": "Smörgåstårta",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": true,
+    "grownup": true,
+    "belong_to_themes": "all"
+   },
+   {
+    "name": "Smörgåstårta",
+    "image": "https://jsonformatter.org/jpg",
+    "kids": true,
+    "grownup": true,
+    "belong_to_themes": "all"
+   }
    ]
  
