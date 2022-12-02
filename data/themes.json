@@ -508,6 +508,12 @@
       "image": "https://ik.imagekit.io/qzqy86it9/Themes/peppapig_BJTzswprb?ik-sdk-version=javascript-1.4.3&updatedAt=1669897340383",
       "kids": true,
       "grownup": false
+    },
+    {
+      "name": "kräftskiva",
+      "image": "https://ik.imagekit.io/qzqy86it9/Themes/kraftskiva_2kyfXDrHE?ik-sdk-version=javascript-1.4.3&updatedAt=1669992098297",
+      "kids": false,
+      "grownup": true
     }
   ]
   
