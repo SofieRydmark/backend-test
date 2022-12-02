@@ -371,7 +371,7 @@
       },
       {
         "name": "Vodka redbull",
-        "image": "",
+        "image": "https://ik.imagekit.io/qzqy86it9/Drinks/bilder/blue_drink_Photo_by_Pranav_Kumar_Jain_Unsplash_bRmgt0q86?ik-sdk-version=javascript-1.4.3&updatedAt=1669992986132",
         "kids": false,
         "grownup": true,
         "belong_to_themes": "Svensexa"
@@ -399,35 +399,35 @@
       },
       {
         "name": "Gryffindor Campari spritz",
-        "image": "",
+        "image": "https://ik.imagekit.io/qzqy86it9/Drinks/bilder/campari_Photo_by_Riccardo_Andolfo_Unsplash_tFQIjs-CJ?ik-sdk-version=javascript-1.4.3&updatedAt=1669993861223",
         "kids": false,
         "grownup": true,
         "belong_to_themes": "Harry Potter"
-      },
+      },  
       {
         "name": "Slytherin Classic Margarita",
-        "image": "",
+        "image": "https://ik.imagekit.io/qzqy86it9/Drinks/bilder/green_margarita_Photo_by_Tamanna_Rumee_Unsplash_40ExaYR2c?ik-sdk-version=javascript-1.4.3&updatedAt=1669993183579",
         "kids": false,
         "grownup": true,
         "belong_to_themes": "Harry Potter"
       },
       {
         "name": "RavenClaw Blue Laggon",
-        "image": "",
+        "image": "https://ik.imagekit.io/qzqy86it9/Drinks/bilder/blue_drink_Photo_by_Pranav_Kumar_Jain_Unsplash_bRmgt0q86?ik-sdk-version=javascript-1.4.3&updatedAt=1669992986132",
         "kids": false,
         "grownup": true,
         "belong_to_themes": "Harry Potter"
       },
       {
         "name": "Hufflepuff Amaretto Spritz",
-        "image": "",
+        "image": "https://ik.imagekit.io/qzqy86it9/Drinks/bilder/Hufflepuff_Amaretto_Spritz_7ORueI4Kv?ik-sdk-version=javascript-1.4.3&updatedAt=1669993670108",
         "kids": false,
         "grownup": true,
         "belong_to_themes": "Harry Potter"
       },
       {
         "name": "Butterbeer",
-        "image": "",
+        "image": "https://ik.imagekit.io/qzqy86it9/Drinks/bilder/butterbeer_Photo_by_Jainam_Sheth_Unsplash_707uJc4eLm?ik-sdk-version=javascript-1.4.3&updatedAt=1669994013676",
         "kids": false,
         "grownup": true,
         "belong_to_themes": "Harry Potter"
@@ -462,21 +462,21 @@
       },
       {
         "name": "Frukt Bål med alkohol",
-        "image": "",
+        "image": "https://ik.imagekit.io/qzqy86it9/Drinks/bilder/panoramix_cauldron_S8BdLos35?ik-sdk-version=javascript-1.4.3&updatedAt=1669990843292",
         "kids": false,
         "grownup": true,
         "belong_to_themes": "all"
       },
       {
         "name": "Frukt Bål",
-        "image": "",
+        "image": "https://ik.imagekit.io/qzqy86it9/Drinks/bilder/panoramix_cauldron_S8BdLos35?ik-sdk-version=javascript-1.4.3&updatedAt=1669990843292",
         "kids": true,
         "grownup": true,
         "belong_to_themes": "all"
       },
       {
         "name": "Häxblandning",
-        "image": "",
+        "image": "https://ik.imagekit.io/qzqy86it9/Drinks/bilder/panoramix_cauldron_S8BdLos35?ik-sdk-version=javascript-1.4.3&updatedAt=1669990843292",
         "kids": true,
         "grownup": false,
         "belong_to_themes": "Halloween"
@@ -497,31 +497,31 @@
       },
       {
         "name": "Captain Jack ",
-        "image": "",
+        "image": "https://ik.imagekit.io/qzqy86it9/Drinks/bilder/black_pearl_Photo_by_Ash_Edmonds_Unsplash_WV7uuQs8H.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669989773125",
         "kids": false,
         "grownup": true,
-        "belong_to_themes": "Pirat"
+        "belong_to_themes": "pirater"
       },
       {
         "name": "Free the sparrow",
         "image": "",
         "kids": false,
         "grownup": true,
-        "belong_to_themes": "Pirat"
+        "belong_to_themes": "pirater"
       },
       {
         "name": "Shipwrecked",
         "image": "",
         "kids": false,
         "grownup": true,
-        "belong_to_themes": "Pirat"
+        "belong_to_themes": "pirater"
       },
       {
         "name": "Mockatil Pirate punch",
-        "image": "",
+        "image": "https://ik.imagekit.io/qzqy86it9/Drinks/bilder/punch_gLzstAtFF?ik-sdk-version=javascript-1.4.3&updatedAt=1669994452069",
         "kids": true,
         "grownup": true,
-        "belong_to_themes": "Pirat"
+        "belong_to_themes": "pirater"
       },
       {
         "name": "Cowboy Cocktail",
@@ -578,5 +578,126 @@
         "kids": false,
         "grownup": true,
         "belong_to_themes": "Brunch"
+      },
+      {
+        "name": "Black Pearl",
+        "image": "https://ik.imagekit.io/qzqy86it9/Drinks/bilder/black_pearl_Photo_by_Ash_Edmonds_Unsplash_WV7uuQs8H.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669989773125",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": "pirater"
+      },
+      {
+        "name": "Panoramix's cauldron (Häxblandning)",
+        "image": "https://ik.imagekit.io/qzqy86it9/Drinks/bilder/panoramix_cauldron_S8BdLos35?ik-sdk-version=javascript-1.4.3&updatedAt=1669990843292",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": [
+          "Halloween",
+          "möhippa",
+          "svensexa",
+          "90s disco",
+          "80s disco",
+          "disco",
+          "pimps n hoes",
+          "magisk trädgård",
+          "las vegas baby",
+          "trädgårds BBQ",
+          "galna hatar",
+          "oktoberfest"
+        ]  
+      },
+      {
+        "name": "Chocolate milkshake",
+        "image": "https://ik.imagekit.io/qzqy86it9/Drinks/bilder/choco_shake_Photo_by_Clarissa_Carbungco_Unsplash_BPGWWZRRZ?ik-sdk-version=javascript-1.4.3&updatedAt=1669991472329",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": [
+          "halloween",
+          "djungel",
+          "pool party",
+          "baby shower",
+          "möhippa",
+          "svensexa",
+          "filmkväll",
+          "harry potter",
+          "pyjamas party",
+          "star wars",
+          "lego",
+          "pippi långstrump",
+          "turtles",
+          "monster",
+          "pyssel och målning",
+          "festival",
+          "dinosaurier",
+          "sagolandet",
+          "rumden",
+          "cirkus",
+          "karaoke",
+          "spa-dag",
+          "paw patrol",
+          "frozen",
+          "gameshow",
+          "tv-spels mästerskap",
+          "zombies",
+          "brädspels-turnering",
+          "talangjakt",
+          "bowling",
+          "magisk trädgård",
+          "speed dating/matchmaking",
+          "ugly sweater",
+          "brunch",
+          "anime",
+          "cinco de mayo",
+          "barbie",
+          "arabiska nätter",
+          "grill & chill",
+          "kärlek",
+          "crazy hair",
+          "galna hattar",
+          "picknick",
+          "greta gris"
+        ]
+      },
+      {
+        "name": "",
+        "image": "",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": ""
+      },
+      {
+        "name": "Black Pearl chocolate shake",
+        "image": "https://ik.imagekit.io/qzqy86it9/Drinks/bilder/choco_shake_Photo_by_Clarissa_Carbungco_Unsplash_BPGWWZRRZ?ik-sdk-version=javascript-1.4.3&updatedAt=1669991472329",
+        "kids": true,
+        "grownup": true,
+        "belong_to_themes": "pirater"
+      },
+      {
+        "name": "",
+        "image": "",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": ""
+      },
+      {
+        "name": "",
+        "image": "",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": ""
+      },
+      {
+        "name": "",
+        "image": "",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": ""
+      },
+      {
+        "name": "",
+        "image": "",
+        "kids": false,
+        "grownup": true,
+        "belong_to_themes": ""
       }
     ]
