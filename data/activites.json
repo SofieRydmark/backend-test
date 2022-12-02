@@ -226,7 +226,7 @@
       },
       {
         "name": "Escape room - olika ämne",
-        "image": "",
+        "image": "https://ik.imagekit.io/qzqy86it9/Activities/Photo_by_Bastien_Herv%C3%A9_escape_room_NBv7PmR3t?ik-sdk-version=javascript-1.4.3&updatedAt=1669984836034",
         "description":"Favorit spel för många, kan du hitta utgång från labirynth eller vem är mördare? Garanterad många timmar lek till alla åldrar. ",
         "kids": true,
         "grownup": true,
@@ -269,7 +269,7 @@
       },
       {
         "name": "Förbereda din egen drink",
-        "image": "",
+        "image": "https://ik.imagekit.io/qzqy86it9/Activities/drink_Photo_by_Adam_Jaime_Ws12QL4bD?ik-sdk-version=javascript-1.4.3&updatedAt=1669985017305",
         "description":"Tycker du om karaibiska drinkar? Lär dig att göra ditt eget hemma. Du ska behöva: olika alkohol, frukt, blender och fantasi samt tillgång till olika recept.",
         "kids": false,
         "grownup": true,
@@ -413,7 +413,7 @@
       },
       {
         "name": "Gör ditt eget klänning till din docka",
-        "image": "",
+        "image": "https://ik.imagekit.io/qzqy86it9/Activities/create_Photo_by_Darling_Arias_EuQ_TcOD-?ik-sdk-version=javascript-1.4.3&updatedAt=1669985209235",
         "description":"Förbered: papper, tygrester, sax, tejp, nålar, trådar. Välj material som ska passa till barn ålder och låt dem göra eget klänning till docka. ",
         "kids": true,
         "grownup": false,
@@ -432,7 +432,7 @@
       },     
       {
         "name": "Förbered din egen mask",
-        "image": "",
+        "image": "https://ik.imagekit.io/qzqy86it9/Activities/mask_Photo_by_Julio_Rionaldo_TFxLKzPh5?ik-sdk-version=javascript-1.4.3&updatedAt=1669985448382",
         "description":"Förbered: papper, tygrester, sax och allt som behövs till att göra mask",
         "kids": true,
         "grownup": true,
@@ -448,7 +448,7 @@
       },      
       {
         "name": "Golvet är lava",
-        "image": "",
+        "image": "https://ik.imagekit.io/qzqy86it9/Activities/floor_is_a_lava_sWrnar6vy?ik-sdk-version=javascript-1.4.3&updatedAt=1669985934597",
         "description":"Alla står på golvet när musik spelar, när music är tyst behöver man hoppa på något övanför golvet då golvet blir lava. Sista person hoppar av spel, spelar fram till det är bara en person kvar. ",
         "kids": true,
         "grownup": false,
@@ -516,7 +516,7 @@
       },      
       {
         "name": "Lego city",
-        "image": "",
+        "image": "https://ik.imagekit.io/qzqy86it9/Activities/lego_build_Photo_by_Kelly_Sikkema__5VSs0YVMl?ik-sdk-version=javascript-1.4.3&updatedAt=1669986518729",
         "description":"Vem ska bygga högst byggnad i staden? Förbered olika legoklossar och låt barnen bygga eget stad.",
         "kids": true,
         "grownup": false,
@@ -524,19 +524,20 @@
       },     
       {
         "name": "Beauty night - treatment",
-        "image": "",
+        "image": "https://ik.imagekit.io/qzqy86it9/Activities/spa_picture_made_by_raphael-lovaski_unsplash_9zZH05NMf?ik-sdk-version=javascript-1.4.3&updatedAt=1669986911587",
         "description":"Välj vilket ritual ska ni göra och förbered alla kosmetiker som behövs. Glöm inte om avslapnade musik och ljus. ",
         "kids": false,
         "grownup": true,
         "belong_to_themes": [
           "möhippa",
           "pyjamas party",
-          "spa-dag"
+          "spa-dag",
+          "baby shower"
         ]
       },      
       {
         "name": "Quidditch match",
-        "image": "",
+        "image": "https://ik.imagekit.io/qzqy86it9/Activities/Quidditch_picture_by_Tony_Hisgett_flickr_c5CZSmKzj?ik-sdk-version=javascript-1.4.3&updatedAt=1669987298390",
         "description": "Förbered 3 bollar (handboll x 2 och en lite ball), kvastskaft till alla spelare och vinna din första Quidditch",
         "kids": true,
         "grownup": true,
@@ -573,19 +574,19 @@
         ]
       },      
       {
-        "name": "",
-        "image": "",
-        "description":"",
-        "kids": true,
+        "name": "Lego run - föreldrar test",
+        "image": "https://ik.imagekit.io/qzqy86it9/Activities/lego_Photo_by_xavi_cabrera_7yMPy3W-y?ik-sdk-version=javascript-1.4.3&updatedAt=1669986607564",
+        "description":"Förbered många bitar av lego och lägg dem stökigt på golvet, låt framtida föräldrar göra en legokörning som imiterar framtida hemaktiviteter när barn leker med lego.",
+        "kids": false,
         "grownup": true,
-        "belong_to_themes": "all"
+        "belong_to_themes": "baby shower"
       },      
       {
-        "name": "",
-        "image": "",
+        "name": "Ansiktmålning",
+        "image": "https://ik.imagekit.io/qzqy86it9/Activities/face_paint_Photo_by_Samar_Ahmad_unsplash__8KLikjrl4?ik-sdk-version=javascript-1.4.3&updatedAt=1669987934188",
         "description":"",
         "kids": true,
-        "grownup": true,
+        "grownup": false,
         "belong_to_themes": "all"
       },      
       {
