@@ -2,7 +2,10 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import themeData from './data/themes.json'
-import decorations from './data/decorations.json'
+import decorationsData from './data/decorations.json'
+import drinksData from './data/drinks.json'
+/* import activitiesData from './data/activites.json' */
+import foodData from './data/food.json'
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/backend-test";
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -55,15 +58,30 @@ if(process.env.RESET_DB) {
   const seedDataBase = async () => {
     await Theme.deleteMany(); 
     await Decoration.deleteMany(); 
+    await Drink.deleteMany();
+   /*  await Activity.deleteMany(); */
+    await Food.deleteMany();
 
     themeData.forEach(singleTheme => {
       const newTheme = new Theme(singleTheme);
       newTheme.save();
     })
-    decorations.forEach(singleDecor => {
+    decorationsData.forEach(singleDecor => {
       const newDecoration = new Decoration(singleDecor);
       newDecoration.save();
     })
+    drinksData.forEach(singleDrink => {
+      const newDrink = new Drink(singleDrink);
+      newDrink.save()
+    })
+    foodData.forEach(singleFood => {
+      const newFood = new Drink(singleFood);
+      newFood.save()
+    })
+   /*  activitiesData.forEach(singleActivity => {
+      const newActivity = new Drink(singleActivity);
+      newActivity.save()
+    }) */
     // await Decoration.deleteMany(); 
     // await Food.deleteMany(); 
 
@@ -103,7 +121,9 @@ app.get("/", (req, res) => {
         "/themes/type/kids": "Show all themes where kids = true",
         "/themes/type/grownups": "Show all themes where grownup = true",
         "/foods": "Show all foods.",
-        "/decorations": "Show all decorations."
+        "/decorations": "Show all decorations.",
+        "/drinks": "Show all drinks options", 
+        "/activities": " Show all activities options"
       },
     ]});
 });
@@ -171,12 +191,12 @@ app.get("/themes/type/kids", async (req, res) => {
 
 app.get("/themes/type/grownup", async (req, res) => {  
   try {
-    const themeKids = await Theme.find({ grownup: true });
+    const themeGrownup = await Theme.find({ grownup: true });
 
     if (themeKids) {
       res.status(200).json({
       success: true,
-      theme: themeKids
+      theme: themeGrownup
     })
     } else {
       res.status(404).json({
@@ -210,6 +230,75 @@ app.get("/decorations", async (req, res) => {
      decorations: decorations
     })
   })
+})
+
+// All drinks 
+app.get("/drinks", async ( req, res) => {
+
+  try {
+    const drinks = await Drink.find()
+    res.status(200).json({
+      response: drinks,
+      success: true
+    })
+  } catch (error) {
+    res.status(400).json({
+      response: "Can't find any drinks option right now",
+      success: false
+    })
+  }
+})
+
+// grownup = true 
+/* app.get("/drinks/grownup", async ( req, res) => {
+  try {
+    const drinksGrownup = await Drink.find({ grownup: true });
+
+    if(drinksGrownup){
+      res.status(200).json({
+        response: drinksGrownup,
+        success: true
+      })
+    } 
+  } catch (error) {
+    res.status(400).json({
+      response: "Can't find any drinks for adults right now",
+      success: false
+    })
+  }
+})
+ */
+
+app.get("/food", async ( req, res) => {
+
+  try {
+    const foodCollection = await Food.find()
+    res.status(200).json({
+      response: foodCollection,
+      success: true
+    })
+  } catch (error) {
+    res.status(400).json({
+      response: "Can't find any food options right now",
+      success: false
+    })
+  }
+})
+
+app.get("activities", async ( req, res) => {
+
+  try {
+    const activitiesCollection = await Activity.find()
+    res.status(200).json({
+      response: activitiesCollection,
+      success: true
+    })
+  } catch (error) {
+    res.status(400).json({
+      response: "Can't find any activities options right now",
+      success: false
+    })
+  }
 })
 
 // Start the server
