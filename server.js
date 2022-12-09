@@ -208,6 +208,7 @@ app.post("/signIn", async (req, res) => {
   }
 })
 
+app.delete("/:userId/admin/delete", authenticateUser);
 app.delete("/:userId/admin/delete", async (req, res) => {
   const { userId } = req.body;
   try {
@@ -231,6 +232,7 @@ app.delete("/:userId/admin/delete", async (req, res) => {
   }
 })
 
+app.patch("/:userId/admin/change", authenticateUser);
 app.patch("/:userId/admin/change", async (req, res) => {
   const { userId, password } = req.body 
   const salt = bcrypt.genSaltSync();
