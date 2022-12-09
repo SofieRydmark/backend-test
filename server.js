@@ -154,20 +154,13 @@ app.post("/signUp", async (req, res) => {
   const { email, password } = req.body;
   try {
     const salt = bcrypt.genSaltSync();
-    const userExists = await User.findOne({ email });
-
     if (password.length < 8) {
       res.status(400).json({
         response: "Password must be minimum 8 characters",
         success: false,
       });
-    } else if (userExists) {
-      res.status(400).json({
-        response: "user already exists",
-        success: false,
-      });
     } else {
-      const newUser = await new User({ email: email, password: bcrypt.hashSync(password, salt)}).save();
+      const newUser = await new User({ email: email.toLowerCase(), password: bcrypt.hashSync(password, salt)}).save();
       res.status(201).json({
         response: {
           email: newUser.email,
@@ -178,8 +171,31 @@ app.post("/signUp", async (req, res) => {
       });
     }
   } catch (error) {
-    res.status(400).json({ response: error, success: false });
+    const userExists = await User.findOne({ email });
+    if (email === '') {
+      res.status(400).json({
+        response: 'Please enter an email',
+        error: error,
+        success: false,
+      });
+    } else if (userExists) {
+      res.status(400).json({
+        response: "User already exists",
+        success: false,
+      });
+    } else if (error.code === 11000 && error.keyPattern.email) {
+      res.status(400).json({
+        response: 'User already exists',
+        error: error,
+        success: false,
+      });
+    } else {
+      res.status(400).json({
+        response: error,
+        success: false,
+      });
   }
+}
 });
 
 app.post("/signIn", async (req, res) => {
@@ -210,18 +226,18 @@ app.post("/signIn", async (req, res) => {
 
 app.delete("/:userId/admin/delete", authenticateUser);
 app.delete("/:userId/admin/delete", async (req, res) => {
-  const { userId } = req.body;
+  const { userId } = req.params;
   try {
     const user = await User.findOneAndDelete({ userId })
     if(user) {
       res.status(200).json({
         success: true,
-        response: 'account removed :('
+        response: 'Account removed :('
       })
     } else {
       res.status(400).json({
         success: false,
-        response: 'user not found'
+        response: 'User not found'
       });
     }
   } catch (error) {
@@ -234,10 +250,11 @@ app.delete("/:userId/admin/delete", async (req, res) => {
 
 app.patch("/:userId/admin/change", authenticateUser);
 app.patch("/:userId/admin/change", async (req, res) => {
-  const { userId, password } = req.body 
+  const { userId } = req.params
+  const { password } = req.body
   const salt = bcrypt.genSaltSync();
   try {
-    const user = await User.findOne({ _id: userId })
+    const user = await User.findOne({ userId })
     if (user) {
     const newPassword = bcrypt.hashSync(password, salt)
     const updateUser = await User.findByIdAndUpdate({ _id: userId}, { $set:{
@@ -246,12 +263,12 @@ app.patch("/:userId/admin/change", async (req, res) => {
     res.status(200).json({
         success: true,
         data: updateUser,
-        response: 'password changed'
+        response: 'Password changed'
       })
     } else {
       res.status(400).json({
         success: false,
-        response: 'user not found'
+        response: 'User not found'
       })
     }
   } catch (error) {
