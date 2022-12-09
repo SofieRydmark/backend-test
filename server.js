@@ -1,36 +1,46 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
-import themeData from './data/themes.json'
-import decorationsData from './data/decorations.json'
-import drinksData from './data/drinks.json'
-/* import activitiesData from './data/activites.json' */
-import foodData from './data/food.json'
+import bcrypt from 'bcrypt';
+import getEndpoints from 'express-list-endpoints';
+// import themeData from './data/themes.json'
+// import decorationsData from './data/decorations.json'
+// import drinksData from './data/drinks.json'
+// import activitiesData from './data/activities.json'
+// import foodData from './data/food.json'
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/backend-test";
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.Promise = Promise;
 
-// Defines the port the app will run on. Defaults to 8080, but can be overridden
-// when starting the server. Example command to overwrite PORT env variable value:
-// PORT=9000 npm start
+const crypto = require("crypto")
 
-const Theme = mongoose.model("Theme", {
+// ************ SCHEMAS & MODELS *************** //
+const UserSchema = new mongoose.Schema({
+  email: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  password: {
+    type: String,
+    minlength: 8,
+    required: true
+  },
+  accessToken: {
+    type: String,
+    default: () => crypto.randomBytes(128).toString("hex"),
+  },
+});
+
+const ThemeSchema = new mongoose.Schema({
   name: String,
   image: String,
   kids: Boolean,
   grownup: Boolean
 }); 
 
-const Decoration = mongoose.model("Decoration", {
-  name: String,
-  image: String,
-  kids: Boolean,
-  grownup: Boolean,
-  belongs_to_themes: [String]
-})
-
-const Food = mongoose.model("Food", {
+const DecorationSchema = new mongoose.Schema({
   name: String,
   image: String,
   kids: Boolean,
@@ -38,7 +48,7 @@ const Food = mongoose.model("Food", {
   belongs_to_themes: String
 })
 
-const Drink = mongoose.model("Drink", {
+const FoodSchema = new mongoose.Schema({
   name: String,
   image: String,
   kids: Boolean,
@@ -46,7 +56,7 @@ const Drink = mongoose.model("Drink", {
   belongs_to_themes: String
 })
 
-const Activity = mongoose.model("Activity", {
+const DrinkSchema = new mongoose.Schema({
   name: String,
   image: String,
   kids: Boolean,
@@ -54,12 +64,29 @@ const Activity = mongoose.model("Activity", {
   belongs_to_themes: String
 })
 
+const ActivitySchema = new mongoose.Schema({
+  name: String,
+  image: String,
+  kids: Boolean,
+  grownup: Boolean,
+  belongs_to_themes: String
+})
+
+const User = mongoose.model("User", UserSchema);
+const Theme = mongoose.model("Theme", ThemeSchema);
+const Decoration = mongoose.model("Decoration", DecorationSchema);
+const Food = mongoose.model("Food", FoodSchema);
+const Drink = mongoose.model("Drink", DrinkSchema);
+const Activity = mongoose.model("Activity", ActivitySchema);
+
+
+// ************ RESET DB *************** //
 if(process.env.RESET_DB) {
   const seedDataBase = async () => {
     await Theme.deleteMany(); 
     await Decoration.deleteMany(); 
     await Drink.deleteMany();
-   /*  await Activity.deleteMany(); */
+    await Activity.deleteMany();
     await Food.deleteMany();
 
     themeData.forEach(singleTheme => {
@@ -78,29 +105,40 @@ if(process.env.RESET_DB) {
       const newFood = new Drink(singleFood);
       newFood.save()
     })
-   /*  activitiesData.forEach(singleActivity => {
-      const newActivity = new Drink(singleActivity);
+    activitiesData.forEach(singleActivity => {
+      const newActivity = new Activity(singleActivity);
       newActivity.save()
-    }) */
-    // await Decoration.deleteMany(); 
-    // await Food.deleteMany(); 
-
-    /* await new Theme({ name: "halloween", image: "http://wwww.hello.com", kids: true, grownup: true }).save();
-    await new Decoration({ name: "balloons", image: "http://wwww.hello.com", kids: true, grownup: true, belongs_to_themes: "all" }).save();
-    await new Food({ name: "cupcakes", image: "http://wwww.hello.com", kids: true, grownup: true, belongs_to_themes: "all" }).save(); */
+    })
 
   }
   seedDataBase();
 }
 
+// ************ PORT *************** //
 const port = process.env.PORT || 8080;
 const app = express();
 
-// Add middlewares to enable cors and json body parsing
+// ************ MIDDLEWARES *************** //
 app.use(cors());
 app.use(express.json());
 
-// If connection to server is down, show below and don't move to routes
+// ************ USER AUTHENTICATION *************** //
+const authenticateUser = async (req, res, next) => {
+  const accessToken = req.header('Authorization');
+
+  try {
+    const user = await User.findOne({ accessToken });
+    if (user) {
+      next();  // when user is confirmed call the next function after authentication
+    } else {
+      res.status(401).json({ response: 'Please log in', success: false });
+    }
+  } catch (error) {
+    res.status(500).json({ response: error, success: false });
+  }
+};
+
+// ************ ENDPOINTS *************** //
 app.use((req, res, next) => {
   if (mongoose.connection.readyState === 1) {
     next()
@@ -111,24 +149,123 @@ app.use((req, res, next) => {
   }
 })
 
-app.get("/", (req, res) => {
-  res.send({
-    Welcome: "Our test data for final project.",
-    Routes: [
-      {
-        "/themes": "Show all themes.",
-        "/themes/:id": "Show single theme by id",
-        "/themes/type/kids": "Show all themes where kids = true",
-        "/themes/type/grownups": "Show all themes where grownup = true",
-        "/foods": "Show all foods.",
-        "/decorations": "Show all decorations.",
-        "/drinks": "Show all drinks options", 
-        "/activities": " Show all activities options"
-      },
-    ]});
+app.get('/', (req, res) => {
+  res.send(getEndpoints(app));
 });
 
-// Start defining your routes here
+// ************ SIGN IN/SIGN UP/UPDATE USER ENDPOINTS *************** //
+
+app.post("/signUp", async (req, res) => {
+  const { email, password } = req.body;
+  try {
+    const salt = bcrypt.genSaltSync();
+    const userExists = await User.findOne({ email });
+
+    if (password.length < 8) {
+      res.status(400).json({
+        response: "Password must be minimum 8 characters",
+        success: false,
+      });
+    } else if (userExists) {
+      res.status(400).json({
+        response: "user already exists",
+        success: false,
+      });
+    } else {
+      const newUser = await new User({ email: email, password: bcrypt.hashSync(password, salt)}).save();
+      res.status(201).json({
+        response: {
+          email: newUser.email,
+          accessToken: newUser.accessToken,
+          userId: newUser._id,
+        },
+        success: true,
+      });
+    }
+  } catch (error) {
+    res.status(400).json({ response: error, success: false });
+  }
+});
+
+app.post("/signIn", async (req, res) => {
+  const { email, password } = req.body;
+  try {
+    const user = await User.findOne({ email })
+    if(user && bcrypt.compareSync(password, user.password)){
+      res.status(201).json({
+        success: true,
+        response: {
+          userId: user._id, 
+          email: user.email,
+          accessToken: user.accessToken}
+        })
+    } else {
+      res.status(400).json({
+        success: false,
+        response: 'Credentials did not match'
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      response: error
+    })
+  }
+})
+
+app.delete("/:userId/admin/delete", async (req, res) => {
+  const { userId } = req.body;
+  try {
+    const user = await User.findOneAndDelete({ userId })
+    if(user) {
+      res.status(200).json({
+        success: true,
+        response: 'account removed :('
+      })
+    } else {
+      res.status(400).json({
+        success: false,
+        response: 'email not found'
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      response: error
+    })
+  }
+})
+
+app.patch("/:userId/admin/change", async (req, res) => {
+  const { userId, password } = req.body 
+  const salt = bcrypt.genSaltSync();
+  try {
+    const user = await User.findOne({ _id: userId })
+    if (user) {
+    const newPassword = bcrypt.hashSync(password, salt)
+    const updateUser = await User.findByIdAndUpdate({ _id: userId}, { $set:{
+      password: newPassword}
+     })
+    res.status(200).json({
+        success: true,
+        data: updateUser,
+        response: 'password changed'
+      })
+    } else {
+      res.status(400).json({
+        success: false,
+        response: 'user not found'
+      })
+    }
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      response: error
+    })
+  }
+})
+
+// ************ CATEGORY ENDPOINTS *************** //
 app.get("/themes", async (req,res) => {
   await Theme.find().then(themes => {
      res.status(200).json({
@@ -232,7 +369,6 @@ app.get("/decorations", async (req, res) => {
   })
 })
 
-// All drinks 
 app.get("/drinks", async ( req, res) => {
 
   try {
@@ -301,7 +437,12 @@ app.get("activities", async ( req, res) => {
   }
 })
 
-// Start the server
+
+// ************ PROJECT ENDPOINTS *************** //
+
+// ************ PROJECTBOARD ENDPOINTS *************** //
+
+// ************ START SERVER *************** //
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
