@@ -220,7 +220,7 @@ app.delete("/:userId/admin/delete", async (req, res) => {
     } else {
       res.status(400).json({
         success: false,
-        response: 'email not found'
+        response: 'user not found'
       });
     }
   } catch (error) {
