@@ -219,7 +219,8 @@ app.post("/signIn", async (req, res) => {
   } catch (error) {
     res.status(500).json({
       success: false,
-      response: error
+      response: 'oops something went wrong',
+      error: error
     })
   }
 })
