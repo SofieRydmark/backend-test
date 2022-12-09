@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 import themeData from './data/themes.json'
 import decorationsData from './data/decorations.json'
 import drinksData from './data/drinks.json'
-/* import activitiesData from './data/activites.json' */
+import activitiesData from './data/activites.json'
 import foodData from './data/food.json'
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/backend-test";
@@ -19,7 +19,9 @@ const Theme = mongoose.model("Theme", {
   name: String,
   image: String,
   kids: Boolean,
-  grownup: Boolean
+  grownup: Boolean,
+  type: Array,
+  
 }); 
 
 const Decoration = mongoose.model("Decoration", {
@@ -27,7 +29,8 @@ const Decoration = mongoose.model("Decoration", {
   image: String,
   kids: Boolean,
   grownup: Boolean,
-  belongs_to_themes: [String]
+  type: Array,
+  belongs_to_themes: Array
 })
 
 const Food = mongoose.model("Food", {
@@ -35,7 +38,8 @@ const Food = mongoose.model("Food", {
   image: String,
   kids: Boolean,
   grownup: Boolean,
-  belongs_to_themes: String
+  type: Array,
+  belongs_to_themes: Array
 })
 
 const Drink = mongoose.model("Drink", {
@@ -43,7 +47,8 @@ const Drink = mongoose.model("Drink", {
   image: String,
   kids: Boolean,
   grownup: Boolean,
-  belongs_to_themes: String
+  type: Array,
+  belongs_to_themes: Array
 })
 
 const Activity = mongoose.model("Activity", {
@@ -51,7 +56,8 @@ const Activity = mongoose.model("Activity", {
   image: String,
   kids: Boolean,
   grownup: Boolean,
-  belongs_to_themes: String
+  type: Array, 
+  belongs_to_themes: Array
 })
 
 if(process.env.RESET_DB) {
@@ -59,7 +65,7 @@ if(process.env.RESET_DB) {
     await Theme.deleteMany(); 
     await Decoration.deleteMany(); 
     await Drink.deleteMany();
-   /*  await Activity.deleteMany(); */
+    await Activity.deleteMany();
     await Food.deleteMany();
 
     themeData.forEach(singleTheme => {
@@ -75,13 +81,13 @@ if(process.env.RESET_DB) {
       newDrink.save()
     })
     foodData.forEach(singleFood => {
-      const newFood = new Drink(singleFood);
+      const newFood = new Food(singleFood);
       newFood.save()
     })
-   /*  activitiesData.forEach(singleActivity => {
-      const newActivity = new Drink(singleActivity);
+    activitiesData.forEach(singleActivity => {
+      const newActivity = new Activity(singleActivity);
       newActivity.save()
-    }) */
+    }) 
     // await Decoration.deleteMany(); 
     // await Food.deleteMany(); 
 
@@ -93,7 +99,7 @@ if(process.env.RESET_DB) {
   seedDataBase();
 }
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8090;
 const app = express();
 
 // Add middlewares to enable cors and json body parsing
@@ -118,26 +124,38 @@ app.get("/", (req, res) => {
       {
         "/themes": "Show all themes.",
         "/themes/:id": "Show single theme by id",
-        "/themes/type/kids": "Show all themes where kids = true",
-        "/themes/type/grownups": "Show all themes where grownup = true",
-        "/foods": "Show all foods.",
+        "/themes/type/:type": "Type = grownup or kids, to see specific themes to different types",
+        "/food": "Show all foods.",
+        "/food/type/:type": "Type = grownup or kids, to see specific food options to different types",
         "/decorations": "Show all decorations.",
+        "/decorations/type/:type": "Type = grownup or kids, to see specific decorations options to different types",
         "/drinks": "Show all drinks options", 
-        "/activities": " Show all activities options"
+        "/drinks/type/:type": "Type = grownup or kids, to see specific drinks options to different types",
+        "/activities": " Show all activities options",
+        "/activities/type/:type": "Type = grownup or kids, to see activity options to different types",
       },
     ]});
 });
 
 // Start defining your routes here
-app.get("/themes", async (req,res) => {
-  await Theme.find().then(themes => {
-     res.status(200).json({
-      success: true,
-      theme: themes
-     })
-   })
- })
 
+/* --------- THEMES GET  ----------- */
+/* app.get("/themes",authenticateUser) */
+app.get("/themes", async (req,res) => {
+  try {
+    const themesCollection = await Theme.find()
+    res.status(200).json({
+      response: themesCollection,
+      success: true
+    })
+  } catch (error) {
+    res.status(400).json({
+      response: "Can't find any themes options right now",
+      success: false
+    })
+  }
+})
+/* app.get("/themes/:id",authenticateUser) */
  app.get("/themes/:id", async (req, res) => {
   try {
     const themeId = await Theme.findById(req.params.id);
@@ -163,76 +181,72 @@ app.get("/themes", async (req,res) => {
   }
 
 })
-
-app.get("/themes/type/kids", async (req, res) => {
-  try {
-    const themeKids = await Theme.find({ kids: true });
-
-    if (themeKids) {
-      res.status(200).json({
-      success: true,
-      theme: themeKids
+/* app.get("/themes/type/:type",authenticateUser) */
+app.get("/themes/type/:type", async (req, res) => {
+  
+  try{
+  const typeOf = await Theme.find({type : req.params.type})
+   if (!typeOf) {
+    res.status(400).json({
+      response: "not found",
+      success: false, 
     })
-    } else {
-      res.status(404).json({
-        success: false,
-        status_code: 404,
-        error: `not found`
-    })
-    }
-  } catch (err) {
-    res.status(400).json({ 
-      success: false,
-      status_code: 400,
-      error: "Invalid route" 
-    })
-  }
-})
-
-app.get("/themes/type/grownup", async (req, res) => {  
-  try {
-    const themeGrownup = await Theme.find({ grownup: true });
-
-    if (themeKids) {
-      res.status(200).json({
-      success: true,
-      theme: themeGrownup
-    })
-    } else {
-      res.status(404).json({
-        success: false,
-        status_code: 404,
-        error: `not found`
-    })
-    }
-  } catch (err) {
-    res.status(400).json({ 
-      success: false,
-      status_code: 400,
-      error: "Invalid route" 
-    })
-  }
-})
-
-app.get("/food", async (req, res) => {
-  await Food.find().then(foods => {
+  } else {
     res.status(200).json({
-     success: true,
-     food: foods
+      response: typeOf,
+      success: true  
     })
+  } 
+} catch (error) {
+  res.status(400).json({
+    response: "Can't find any activities options for your type right now",
+    success: false
   })
+}
 })
 
+/* --------- DECORATIONS GET ----------- */
+/* app.get("/decorations",authenticateUser) */
 app.get("/decorations", async (req, res) => {
-  await Decoration.find().then(decorations => {
+  try {
+    const decorationsCollection = await Decoration.find()
     res.status(200).json({
-     success: true,
-     decorations: decorations
+      response: decorationsCollection,
+      success: true
     })
-  })
+  } catch (error) {
+    res.status(400).json({
+      response: "Can't find any decorations options right now",
+      success: false
+    })
+  }
 })
 
-// All drinks 
+/* app.get("/decorations/type/:type",authenticateUser) */
+app.get("/decorations/type/:type", async (req, res) => {
+  
+  try{
+  const typeOf = await Decoration.find({type : req.params.type})
+   if (!typeOf) {
+    res.status(400).json({
+      response: "not found",
+      success: false, 
+    })
+  } else {
+    res.status(200).json({
+      response: typeOf,
+      success: true  
+    })
+  } 
+} catch (error) {
+  res.status(400).json({
+    response: "Can't find any decorations options for your type right now",
+    success: false
+  })
+}
+})
+/* --------- DRINKS GET  ----------- */
+/* app.get("/drinks",authenticateUser) */
 app.get("/drinks", async ( req, res) => {
 
   try {
@@ -249,26 +263,33 @@ app.get("/drinks", async ( req, res) => {
   }
 })
 
-// grownup = true 
-/* app.get("/drinks/grownup", async ( req, res) => {
-  try {
-    const drinksGrownup = await Drink.find({ grownup: true });
-
-    if(drinksGrownup){
-      res.status(200).json({
-        response: drinksGrownup,
-        success: true
-      })
-    } 
-  } catch (error) {
+/* app.get("/drinks/type/:type",authenticateUser) */
+app.get("/drinks/type/:type", async (req, res) => {
+  
+  try{
+  const typeOf = await Drink.find({type : req.params.type})
+   if (!typeOf) {
     res.status(400).json({
-      response: "Can't find any drinks for adults right now",
-      success: false
+      response: "not found",
+      success: false, 
     })
-  }
+  } else {
+    res.status(200).json({
+      response: typeOf,
+      success: true  
+    })
+  } 
+} catch (error) {
+  res.status(400).json({
+    response: "Can't find any drinks options for your type right now",
+    success: false
+  })
+}
 })
- */
 
+
+/* --------- FOOD GET  ----------- */
+/* app.get("/food",authenticateUser) */
 app.get("/food", async ( req, res) => {
 
   try {
@@ -285,7 +306,32 @@ app.get("/food", async ( req, res) => {
   }
 })
 
-app.get("activities", async ( req, res) => {
+/* app.get("/food/type/:type",authenticateUser) */
+app.get("/food/type/:type", async (req, res) => {
+  
+  try{
+  const typeOf = await Food.find({type : req.params.type})
+   if (!typeOf) {
+    res.status(400).json({
+      response: "not found",
+      success: false, 
+    })
+  } else {
+    res.status(200).json({
+      response: typeOf,
+      success: true  
+    })
+  } 
+} catch (error) {
+  res.status(400).json({
+    response: "Can't find any food options for your type right now",
+    success: false
+  })
+}
+})
+/* --------- ACTIVITIES GET  ----------- */
+/* app.get("/activities",authenticateUser) */
+app.get("/activities", async ( req, res) => {
 
   try {
     const activitiesCollection = await Activity.find()
@@ -300,6 +346,32 @@ app.get("activities", async ( req, res) => {
     })
   }
 })
+
+/* app.get("/activities/type/:type",authenticateUser) */
+app.get("/activities/type/:type", async (req, res) => {
+  
+  try{
+  const typeOf = await Activity.find({type : req.params.type})
+   if (!typeOf) {
+    res.status(400).json({
+      response: "not found",
+      success: false, 
+    })
+  } else {
+    res.status(200).json({
+      response: typeOf,
+      success: true  
+    })
+  } 
+} catch (error) {
+  res.status(400).json({
+    response: "Can't find any Activity options for your type right now",
+    success: false
+  })
+}
+})
+
+
 
 // Start the server
 app.listen(port, () => {
