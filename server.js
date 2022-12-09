@@ -36,40 +36,35 @@ const UserSchema = new mongoose.Schema({
 const ThemeSchema = new mongoose.Schema({
   name: String,
   image: String,
-  kids: Boolean,
-  grownup: Boolean
+  type: Array
 }); 
 
 const DecorationSchema = new mongoose.Schema({
   name: String,
   image: String,
-  kids: Boolean,
-  grownup: Boolean,
-  belongs_to_themes: String
+  type: Array,
+  belongs_to_themes: Array
 })
 
 const FoodSchema = new mongoose.Schema({
   name: String,
   image: String,
-  kids: Boolean,
-  grownup: Boolean,
-  belongs_to_themes: String
+  type: Array,
+  belongs_to_themes: Array
 })
 
 const DrinkSchema = new mongoose.Schema({
   name: String,
   image: String,
-  kids: Boolean,
-  grownup: Boolean,
-  belongs_to_themes: String
+  type: Array,
+  belongs_to_themes: Array
 })
 
 const ActivitySchema = new mongoose.Schema({
   name: String,
   image: String,
-  kids: Boolean,
-  grownup: Boolean,
-  belongs_to_themes: String
+  type: Array,
+  belongs_to_themes: Array
 })
 
 const User = mongoose.model("User", UserSchema);
