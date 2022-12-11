@@ -3,11 +3,11 @@ import cors from "cors";
 import mongoose from "mongoose";
 import bcrypt from 'bcrypt';
 import getEndpoints from 'express-list-endpoints';
-// import themeData from './data/themes.json'
-// import decorationsData from './data/decorations.json'
-// import drinksData from './data/drinks.json'
-// import activitiesData from './data/activities.json'
-// import foodData from './data/food.json'
+//  import themeData from './data/themes.json';
+// import decorationsData from './data/decorations.json';
+// import drinksData from './data/drinks.json';
+// import activitiesData from './data/activities.json';
+// import foodData from './data/food.json';
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/backend-test";
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -472,11 +472,16 @@ app.get("activities", async ( req, res) => {
 })
 
 
-// ************ PROJECT ENDPOINTS *************** //
+                                                  // ************ PROJECT ENDPOINTS *************** //
 
 
-// ************ PROJECTBOARD ENDPOINTS *************** //
-app.get("/project-board", authenticateUser)
+                                                  // ************ PROJECTBOARD ENDPOINTS *************** //
+/* authenticate user */
+
+app.get("/project-board", authenticateUser) 
+
+/* GET user project board */
+
 app.get("/project-board", async (req, res) => {
 
   try{
@@ -496,7 +501,26 @@ app.get("/project-board", async (req, res) => {
   } 
 })
 
-// add project to the board
+app.get("/project-board/projects", async (req, res) => {
+  const allProjects = await Project.find()
+  try{
+    res.status(200).json({
+      response: allProjects,
+      success: true,
+
+    })
+
+  }catch(error){
+    res.status(404).json({
+      response: `Could not find any projects!`,
+      success: false
+    })
+  }
+
+})
+
+/* add project to the board */
+
 app.post("/project-board/addProject", async (req, res) => {
   const { name, due_date } = req.body
   try{
@@ -514,6 +538,55 @@ app.post("/project-board/addProject", async (req, res) => {
     })
 
   }
+})
+
+/* change name and due date in single project */
+
+app.patch("/project-board/addProject", async (req, res) => {
+  const { name, due_date } = req.body
+  try{
+    const projectToChange= await Project.findById(req.params._id)
+    if (name){
+      res.status(200).json({
+        response: `The project name is updated`,
+        success: true
+
+      })
+    } else if (due_date){
+      res.status(200).json({
+        response: `The project name is updated`,
+        success: true
+
+      })
+    }
+      
+  } catch(error) {
+    res.status(401).json({
+      response: "Invalid credentials",
+      success: false
+    })
+
+  } 
+})
+
+/* delete the project from the project board */ 
+
+app.delete("/project-board/:project_id", async (req, res) => {
+  try{
+    const projectToDelete= await Project.findById(req.params._id)
+
+      res.status(200).json({
+        response: `Project has been deleted!!`,
+        success: true
+
+      })
+  } catch(error) {
+    res.status(401).json({
+      response: "Invalid credentials",
+      success: false
+    })
+
+  } 
 })
 
 
