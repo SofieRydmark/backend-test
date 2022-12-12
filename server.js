@@ -47,6 +47,7 @@ const Drink = mongoose.model("Drink", {
   image: String,
   kids: Boolean,
   grownup: Boolean,
+  alcohol:Boolean,
   type: Array,
   belongs_to_themes: Array
 })
