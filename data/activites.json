@@ -3,16 +3,14 @@
         "name": "Truth or Dare (Scare)",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/Truth_or_dare.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669885847791",
         "description":"Klassiska spel som kan användas för både vuxen och barn fest.Du kan köpa redo spel med frågor eller förbereda frågor själv DYI",
-        "kids": true,
-        "grownup": true,
+        "type":["grownup", "kids"],
         "belong_to_themes": "all"
       },
       {
         "name": "Skattjakt",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/Skattjakt_fyisldEFd?ik-sdk-version=javascript-1.4.3&updatedAt=1669889325773",
         "description":" Deltagarna har två koordinatsystem var, ett för att rita in och “gömma” skatter och ett för att själv gissa var kompisen har gömt sina skatter.",
-        "kids": true,
-        "grownup": true,
+        "type":["grownup","kids"],
         "belong_to_themes": [
             "halloween",
             "djungle",
@@ -24,8 +22,7 @@
         "name": "Alkoholpingis",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/image-from-rawpixel-id-5928037-jpeg.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1669894284886",
         "description":"Du behöver ett pingisbord, pingisboll, valfri alkoholdryck och pingisracket om ni inte väljer att köra med handflatorna.",
-        "kids": false,
-        "grownup": true,
+        "type":"grownup",
         "belong_to_themes": [
             "halloween",
             "sangria night",
@@ -37,32 +34,28 @@
         "name": "Kubb",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/Kubb_pe4jbyTeU7?ik-sdk-version=javascript-1.4.3&updatedAt=1669901222009",
         "description":"Kubb är ett klassiskt kastspel som passar att spela såväl i den egna trädgården som i parken eller på stranden",
-        "kids": true,
-        "grownup": true,
+        "type":["grownup","kids"],
         "belong_to_themes": "all"
       },
       {
         "name": "Spökkoppar",
         "image": "",
         "description":"Stapla spökkoppar gjorda som spöken och försök slå ner dem genom att skjuta ner Nerf-vapen på 10 fots avstånd. Ge ut ett litet pris för att slå ner dem alla!",
-        "kids": true,
-        "grownup": true,
+        "type":["grownup","kids"],
         "belong_to_themes": "halloween"
       },
       {
         "name": "Halloween dekorationer jakt",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/Halloween_decor_4mcXnd1l6?ik-sdk-version=javascript-1.4.3&updatedAt=1669901950151",
         "description":"Gå på familjejakt för att hitta olika typer av Halloween-dekorationer",
-        "kids": true,
-        "grownup": false,
+        "type":"kids",
         "belong_to_themes": "halloween"
       },
       {
         "name": "Bildspel - pictionary ",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/pictionary_g2NiemjHR?ik-sdk-version=javascript-1.4.3&updatedAt=1669902235243",
         "description":"Varje lag har en spelpjäs som de förflyttar över spelplanens rutor för att hålla koll på ställningen. Varje ruta indikerar med en färg eller tecken vilken typ av bild som ska ritas. Vissa rutor gör så att alla lag ska rita samma sak samtidigt, då är det laget som gissar rätt först som vinner den omgången.",
-        "kids": true,
-        "grownup": true,
+        "type":["grownup","kids"],
         "belong_to_themes":[
             "halloween",
             "zombie",
@@ -83,8 +76,7 @@
         "name": "Trivia",
         "image": "",
         "description":" Spelet Trivia är ett favoritspel som vanligtvis spelas på barer och pubar över hela världen. Du kan spela trivia online, eller köpa kort med frågor. Det finns många olika ämne som man kan välja från t ex sport, film, kändisar och m.m",
-        "kids": true,
-        "grownup": true,
+        "type":["grownup","kids"],
         "belong_to_themes": [
           "filmkväll",
           "harry potter",
@@ -105,8 +97,7 @@
         "name": "Kostymtävling",
         "image": "",
         "description":"Välja ämne och förbered kostym för festen. Under kvällen välj bäst kostym och vinare.",
-        "kids": true,
-        "grownup": true,
+        "type":["grownup","kids"],
         "belong_to_themes": [
           "filmkväll",
           "harry potter",
@@ -154,8 +145,7 @@
         "name": "Poker turnering",
         "image": "",
         "description":"",
-        "kids": false,
-        "grownup": true,
+        "type":"grownup",
         "belong_to_themes":[
           "casino",
           "pokerkväll",
@@ -169,8 +159,7 @@
         "name": "Dans med ballong",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/image-from-rawpixel-id-99906-jpeg_nsqIcgwvb?ik-sdk-version=javascript-1.4.3&updatedAt=1669895239901",
         "description":"Välj din dans partner och lägg balong mellan er. Paar som dansar längst utan att tappa balong vinner",
-        "kids": true,
-        "grownup": true,
+        "type":["grownup","kids"],
         "belong_to_themes": [
           "halloween",
           "festival",
@@ -184,8 +173,7 @@
         "name": "Brädspelsmarathon",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/board_game_night_odMM0CSV-?ik-sdk-version=javascript-1.4.3&updatedAt=1669889282604",
         "description":"Välj några brädspel som ni ska spela, läsa reglerna och bjud kompisar för många roliga timmar med favorita brädspel",
-        "kids": true,
-        "grownup": true,
+        "type":["grownup","kids"],
         "belong_to_themes": [
           "harry potter",
           "sagan om ringen",
@@ -204,10 +192,9 @@
         "name": "Twister",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/twister_IswrWj_Fi?ik-sdk-version=javascript-1.4.3&updatedAt=1669889379230",
         "description":"Klassiskt spel som alla känner. Du ska behöva ha en matta med olika färger samt sätt att välja vilken kroppsdel behövs lägga på vilket färg.",
-        "kids": true,
-        "grownup": true,
+        "type":["grownup","kids"],
         "belong_to_themes": [
-          "halloween",
+          "halloween",  
           "djungel",
           "80s disco",
           "möhippa",
@@ -228,8 +215,7 @@
         "name": "Escape room - olika ämne",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/Photo_by_Bastien_Herv%C3%A9_escape_room_NBv7PmR3t?ik-sdk-version=javascript-1.4.3&updatedAt=1669984836034",
         "description":"Favorit spel för många, kan du hitta utgång från labirynth eller vem är mördare? Garanterad många timmar lek till alla åldrar. ",
-        "kids": true,
-        "grownup": true,
+        "type":["grownup","kids"],
         "belong_to_themes": [
           "halloween",
           "harry potter",
@@ -271,8 +257,7 @@
         "name": "Förbereda din egen drink",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/drink_Photo_by_Adam_Jaime_Ws12QL4bD?ik-sdk-version=javascript-1.4.3&updatedAt=1669985017305",
         "description":"Tycker du om karaibiska drinkar? Lär dig att göra ditt eget hemma. Du ska behöva: olika alkohol, frukt, blender och fantasi samt tillgång till olika recept.",
-        "kids": false,
-        "grownup": true,
+        "type":"grownup",
         "belong_to_themes": [
           "halloween",
           "möhippa",
@@ -311,8 +296,7 @@
         "name": "Öltesting",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/Beer_Image_by_Karolina__Kaboompics_for_rawpixel_X-L4OpdEH.com?ik-sdk-version=javascript-1.4.3&updatedAt=1669894455709",
         "description":"Prova öl från olika länder och hittar din favorit.",
-        "kids": false,
-        "grownup": true,
+        "type":"grownup",
         "belong_to_themes": [
           "halloween",
           "möhippa",
@@ -355,8 +339,7 @@
         "name": "Vintesting",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/Image_by_Karolina__Kaboompics_for_rawpixel_uolumnMO9.com?ik-sdk-version=javascript-1.4.3&updatedAt=1669894674427",
         "description":"Prova vin från olika länder och hittar din favorit.",
-        "kids": false,
-        "grownup": true,
+        "type":"grownup",
         "belong_to_themes": [
           "halloween",
           "möhippa",
@@ -395,8 +378,7 @@
         "name": "Dansstopp",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/image-from-rawpixel-id-99906-jpeg_nsqIcgwvb?ik-sdk-version=javascript-1.4.3&updatedAt=1669895239901",
         "description":"Förbered en mindre stol än spelare cch välj musik. Människor dansar runt stolar och när det är stop på music, person som kan inte sitta på stol hoppar av, fortsätt tills alla stolar är borta, sista person vinner. ",
-        "kids": true,
-        "grownup": true,
+        "type":["grownup","kids"],
         "belong_to_themes": [
           "halloween",
           "festival",
@@ -415,8 +397,7 @@
         "name": "Gör ditt eget klänning till din docka",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/create_Photo_by_Darling_Arias_EuQ_TcOD-?ik-sdk-version=javascript-1.4.3&updatedAt=1669985209235",
         "description":"Förbered: papper, tygrester, sax, tejp, nålar, trådar. Välj material som ska passa till barn ålder och låt dem göra eget klänning till docka. ",
-        "kids": true,
-        "grownup": false,
+        "type":"kids",
         "belong_to_themes": [
           "pyssel och målning",
           "barbie"
@@ -426,32 +407,28 @@
         "name": "Målning tävling",
         "image": "",
         "description":"Välj ämne och måla ditt egen tavla",
-        "kids": true,
-        "grownup": true,
+        "type":["grownup","kids"],
         "belong_to_themes": "pyssel och målning"
       },     
       {
         "name": "Förbered din egen mask",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/mask_Photo_by_Julio_Rionaldo_TFxLKzPh5?ik-sdk-version=javascript-1.4.3&updatedAt=1669985448382",
         "description":"Förbered: papper, tygrester, sax och allt som behövs till att göra mask",
-        "kids": true,
-        "grownup": true,
+        "type":["grownup","kids"],
         "belong_to_themes": "all"
       },      
       {
         "name": "Gå på plankan",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/plank_1irIz2XRD?ik-sdk-version=javascript-1.4.3&updatedAt=1669885934521",
         "description":"Förbered en planka och några block. Spika fast plankan på de små blocken, men se till att den är stadig. Håll plankan bara några centimeter från marken för att undvika olyckor. Efter att plankan har satts kan du antingen använda en liten uppblåsbar pool eller en blå presenning att lägga under plankan för att ge den `hav` vibe. Nu, för att börja det roliga, låt alla stå i kö. Den som faller i poolen eller presenningen förlorar.",
-        "kids": true,
-        "grownup": true,
+        "type":["grownup","kids"],
         "belong_to_themes": "pirater"
       },      
       {
         "name": "Golvet är lava",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/floor_is_a_lava_sWrnar6vy?ik-sdk-version=javascript-1.4.3&updatedAt=1669985934597",
         "description":"Alla står på golvet när musik spelar, när music är tyst behöver man hoppa på något övanför golvet då golvet blir lava. Sista person hoppar av spel, spelar fram till det är bara en person kvar. ",
-        "kids": true,
-        "grownup": false,
+        "type":"kids",
         "belong_to_themes": [
           "halloween",
           "möhippa",
@@ -490,8 +467,7 @@
         "name": "Kanonbollskastning - boule",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/Boule_gi2lLlVYq?ik-sdk-version=javascript-1.4.3&updatedAt=1669887492578",
         "description":"Spelet börjar med att man lottar om vem som ska kasta lillen. En spelare i det lag som vann lotten ritar en ring i gruset och kastar ut lillen mellan 6 och 10 meter. Omgången spelas sedan från denna ring, och det är det lag som inte är närmast lillen som spelar nästa klot. I vilken ordning man spelar sina klot inom laget avgör man själv",
-        "kids": true,
-        "grownup": true,
+        "type":["grownup","kids"],
         "belong_to_themes": [
           "pirater",
           "djungel"
@@ -501,8 +477,7 @@
         "name": "Boule Match",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/Boule_gi2lLlVYq?ik-sdk-version=javascript-1.4.3&updatedAt=1669887492578",
         "description":"Spelet börjar med att man lottar om vem som ska kasta lillen. En spelare i det lag som vann lotten ritar en ring i gruset och kastar ut lillen mellan 6 och 10 meter. Omgången spelas sedan från denna ring, och det är det lag som inte är närmast lillen som spelar nästa klot. I vilken ordning man spelar sina klot inom laget avgör man själv",
-        "kids": false,
-        "grownup": true,
+        "type":"grownup",
         "belong_to_themes": [
           "sportfest",
           "bowling",
@@ -518,16 +493,14 @@
         "name": "Lego city",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/lego_build_Photo_by_Kelly_Sikkema__5VSs0YVMl?ik-sdk-version=javascript-1.4.3&updatedAt=1669986518729",
         "description":"Vem ska bygga högst byggnad i staden? Förbered olika legoklossar och låt barnen bygga eget stad.",
-        "kids": true,
-        "grownup": false,
+        "type":"kids",
         "belong_to_themes": "all"
       },     
       {
         "name": "Beauty night - treatment",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/spa_picture_made_by_raphael-lovaski_unsplash_9zZH05NMf?ik-sdk-version=javascript-1.4.3&updatedAt=1669986911587",
         "description":"Välj vilket ritual ska ni göra och förbered alla kosmetiker som behövs. Glöm inte om avslapnade musik och ljus. ",
-        "kids": false,
-        "grownup": true,
+        "type":"grownup",
         "belong_to_themes": [
           "möhippa",
           "pyjamas party",
@@ -539,24 +512,21 @@
         "name": "Quidditch match",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/Quidditch_picture_by_Tony_Hisgett_flickr_c5CZSmKzj?ik-sdk-version=javascript-1.4.3&updatedAt=1669987298390",
         "description": "Förbered 3 bollar (handboll x 2 och en lite ball), kvastskaft till alla spelare och vinna din första Quidditch",
-        "kids": true,
-        "grownup": true,
+        "type":["grownup","kids"],
         "belong_to_themes": "harry potter"
       },      
       {
         "name": "UNO spel",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/UNO_f_7-IvOsc?ik-sdk-version=javascript-1.4.3&updatedAt=1669887542418",
         "description":"Du behöver att köpa spel. Målet är att bli av med alla kort men för att kunna spela ut det sista kortet måste du komma ihåg att skrika ”UNO!” så fort du blir av med ditt näst sista kort. Om en spelare glömmer bort att säga UNO måste denne dra två kort från korthögen. Denne behöver även stå över sin tur.",
-        "kids": true,
-        "grownup": true,
+        "type":["grownup","kids"],
         "belong_to_themes": "all"
       },      
       {
         "name": "Roulette",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/Roulette_KhlCDSN_O?ik-sdk-version=javascript-1.4.3&updatedAt=1669896787979",
         "description":"",
-        "kids": false,
-        "grownup": true,
+        "type":"grownup",
         "belong_to_themes": [
           "möhippa",
           "svensexa",
@@ -577,96 +547,15 @@
         "name": "Lego run - föreldrar test",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/lego_Photo_by_xavi_cabrera_7yMPy3W-y?ik-sdk-version=javascript-1.4.3&updatedAt=1669986607564",
         "description":"Förbered många bitar av lego och lägg dem stökigt på golvet, låt framtida föräldrar göra en legokörning som imiterar framtida hemaktiviteter när barn leker med lego.",
-        "kids": false,
-        "grownup": true,
+        "type":"grownup",
         "belong_to_themes": "baby shower"
       },      
       {
         "name": "Ansiktmålning",
         "image": "https://ik.imagekit.io/qzqy86it9/Activities/face_paint_Photo_by_Samar_Ahmad_unsplash__8KLikjrl4?ik-sdk-version=javascript-1.4.3&updatedAt=1669987934188",
         "description":"",
-        "kids": true,
-        "grownup": false,
+        "type":"kids",
         "belong_to_themes": "all"
-      },      
-      {
-        "name": "",
-        "image": "",
-        "description":"",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },      
-      {
-        "name": "",
-        "image": "",
-        "description":"",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },      
-      {
-        "name": "",
-        "image": "",
-        "description":"",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },      
-      {
-        "name": "",
-        "image": "",
-        "description":"",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },      
-      {
-        "name": "",
-        "image": "",
-        "description":"",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },      
-      {
-        "name": "",
-        "image": "",
-        "description":"",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },      
-      {
-        "name": "",
-        "image": "",
-        "description":"",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },      
-      {
-        "name": "",
-        "image": "",
-        "description":"",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },      
-      {
-        "name": "",
-        "image": "",
-        "description":"",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      },      
-      {
-        "name": "",
-        "image": "",
-        "description":"",
-        "kids": true,
-        "grownup": true,
-        "belong_to_themes": "all"
-      }
+      }    
+
 ]
