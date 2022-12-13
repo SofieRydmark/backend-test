@@ -107,7 +107,12 @@ const ProjectSchema = new mongoose.Schema({
     name: String,
     phone: Number, 
     default: null
-  }
+  },
+  themes: { type: Array, default: null },
+  decorations:{ type: Array, default: null },
+  food: { type: Array, default: null },
+  drinks: { type: Array, default: null },
+  activities: { type: Array, default: null }
 })
 
 // const GuestListSchema = new mongoose.Schema({
@@ -666,12 +671,7 @@ app.patch("/project-board/projects/:projectId", async (req, res) => {
         data: updatedProject
       })
       console.log(name, guestList)
-        // .catch(err => {
-        //   res.status(500).json({
-        //     response: "Could not update the project",
-        //     error: err
-        //   })
-        // })
+
     } else {
       res.status(500).json({
         response: "Could not update"
