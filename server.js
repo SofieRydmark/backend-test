@@ -67,32 +67,13 @@ const ActivitySchema = new mongoose.Schema({
   belongs_to_themes: Array
 })
 
-// const ProjectSchema = new mongoose.Schema({
-//   name: {
-//     type: String,
-//     required: true,
-//     minlength: 5,
-//     maxlength: 30,
-//     trim: true // remove unnecesserary white spaces
-//   },
-//   due_date: {
-//     type: String,
-//     default: "YY-MM-DD"
-//   },
-//   createdAt: {
-//     type: Date,
-//     default: () => new Date()
-//   },
-//   data: Array
-// })
-
 const ProjectSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
     minlength: 5,
     maxlength: 30,
-    trim: true // remove unnecesserary white spaces
+    trim: true // remove unnecessary white spaces
   },
   due_date: {
     type: String,
@@ -103,7 +84,7 @@ const ProjectSchema = new mongoose.Schema({
     default: () => new Date()
   },
   guestList: {
-    type: Array,
+    type: [GuestSchema],
     name: String,
     phone: Number, 
     default: null
@@ -129,16 +110,16 @@ const ProjectSchema = new mongoose.Schema({
 //   }
 // })
 
-// const GuestSchema = new mongoose.Schema({
-//   name: {
-//     type: String,
-//     trim: true
-//   },
-//   phone: {
-//     type: Number,
-//   }
+const GuestSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    trim: true
+  },
+  phone: {
+    type: Number,
+  }
   
-// })
+})
 
 const User = mongoose.model("User", UserSchema);
 const Theme = mongoose.model("Theme", ThemeSchema);
@@ -148,7 +129,7 @@ const Drink = mongoose.model("Drink", DrinkSchema);
 const Activity = mongoose.model("Activity", ActivitySchema);
 const Project = mongoose.model("Project", ProjectSchema);
 // const GuestList = mongoose.model("GuestList", GuestListSchema);
-// const Guest = mongoose.model("Guest", GuestSchema);
+ const Guest = mongoose.model("Guest", GuestSchema);
 
 
 // ************ RESET DB *************** //
@@ -524,6 +505,7 @@ app.get("activities", async ( req, res) => {
     res.status(400).json({
       response: "Can't find any activities options right now",
       success: false
+
     })
   }
 })
@@ -625,39 +607,11 @@ app.post("/project-board/projects/addProject", async (req, res) => {
   }
 })
 
-/* change name and due date in single project */ // 
+/* change name and due date in single project and add guests to guest list */ 
 app.get("/project-board/projects/:projectId", authenticateUser) 
-// app.post("/project-board/projects/:projectId/addGuest", async (req, res) => {
-//   const { projectId } = req.params
-//   const updates = req.body
-
-// try{
-//   const projectToChange= await Project.findById( {_id: projectId})
-//   if (projectId) {
-//     db.projects.$push(updates)
-//               res.status(200).json({
-//             response: "Updated",
-//             data: projectToChange
-//           })
-
-//   }else {
-//           res.status(500).json({
-//             response: "Could not update"
-//           })
-//   }
-// }catch(error) {
-//         res.status(401).json({
-//           response: "Invalid credentials",
-//           success: false,
-//           error: error
-//    })
-//   }
-
-// })
-
 app.patch("/project-board/projects/:projectId", async (req, res) => {
   const { projectId } = req.params
-  const { guestList, name } = req.body
+  const { guestList, phone, name, due_date } = req.body
   // console.log("name", req.body.guestList)
  try{
   const projectToChange= await Project.findOne({ projectId })
@@ -665,7 +619,38 @@ app.patch("/project-board/projects/:projectId", async (req, res) => {
       // const guestListupdate = req.body.guestList
       // const nameUpdate = req.body.name
       const updatedProject = await Project.findByIdAndUpdate({ _id: projectId}, { $push:{
-      guestList: guestList} }, { $set: {name: name} })
+        guestList: guestList},  $set: {name: name, due_date: due_date} })
+        res.status(200).json({
+        response: "Updated",
+        data: updatedProject
+      })
+      console.log("something", guestList)
+
+    } else {
+      res.status(500).json({
+        response: "Could not update"
+      })
+    }
+ }catch(error) {
+      res.status(401).json({
+        response: "Invalid credentials",
+        success: false,
+        error: error
+ })
+}
+})
+
+app.delete("/project-board/projects/:projectId", async (req, res) => {
+  const { projectId } = req.params
+  const { guestList, name, guestListName } = req.body
+  // console.log("name", req.body.guestList)
+ try{
+  const projectToChange= await Project.findOne({ projectId })
+    if (projectToChange){
+      // const guestListupdate = req.body.guestList
+      // const nameUpdate = req.body.name
+      const updatedProject = await Project.findByIdAndUpdate({ _id: projectId}, { $push:{
+        guestList: guestList},  $set: {name: name, name: guestListName} })
         res.status(200).json({
         response: "Updated",
         data: updatedProject
@@ -685,6 +670,7 @@ app.patch("/project-board/projects/:projectId", async (req, res) => {
  })
 }
 })
+
 
 /* DELETE the project from the project board */ //WORKS PERFECT
   app.get("/project-board/projects/:projectId", authenticateUser) 
@@ -716,27 +702,27 @@ app.patch("/project-board/projects/:projectId", async (req, res) => {
 
                                                   // ************ GUEST LIST ENDPOINTS *************** //
 
-  /* Add guest's list to project board */ // man måste hitta project ID först
-  app.get("/project-board", authenticateUser) 
-  app.post("/project-board/projects/:project_id/guestList", async (req, res) => {
-  const { name, phone } = req.body
-  const projectID = Project.findById({_id: req.params._id})
-  try{
-    const newGuestList = new GuestList ({name})
-    await newGuestList.save()
-    res.status(200).json({
-      success: true,
-      response: newGuestList
-    })
-  }catch(error) {
-    res.status(400).json({
-      success: false,
-      response: `Guest list failed to add`,
-      error: error
-    })
+//   /* Add guest's list to project board */ // man måste hitta project ID först
+//   app.get("/project-board", authenticateUser) 
+//   app.post("/project-board/projects/:project_id/guestList", async (req, res) => {
+//   const { name, phone } = req.body
+//   const projectID = Project.findById({_id: req.params._id})
+//   try{
+//     const newGuestList = new GuestList ({name})
+//     await newGuestList.save()
+//     res.status(200).json({
+//       success: true,
+//       response: newGuestList
+//     })
+//   }catch(error) {
+//     res.status(400).json({
+//       success: false,
+//       response: `Guest list failed to add`,
+//       error: error
+//     })
 
-  }
-})
+//   }
+// })
 
 
 
