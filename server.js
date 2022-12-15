@@ -85,7 +85,7 @@ const ProjectSchema = new mongoose.Schema({
   },
   guestList: {
     type: [GuestSchema],
-    name: String,
+    guestName: String,
     phone: Number, 
     default: null
   },
@@ -111,7 +111,7 @@ const ProjectSchema = new mongoose.Schema({
 // })
 
 const GuestSchema = new mongoose.Schema({
-  name: {
+  guestName: {
     type: String,
     trim: true
   },
@@ -167,7 +167,7 @@ if(process.env.RESET_DB) {
 }
 
 // ************ PORT *************** //
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8090;
 const app = express();
 
 // ************ MIDDLEWARES *************** //
@@ -611,7 +611,7 @@ app.post("/project-board/projects/addProject", async (req, res) => {
 app.get("/project-board/projects/:projectId", authenticateUser) 
 app.patch("/project-board/projects/:projectId", async (req, res) => {
   const { projectId } = req.params
-  const { guestList, phone, name, due_date } = req.body
+  const { guestList, guestName, phone, name, due_date } = req.body
   // console.log("name", req.body.guestList)
  try{
   const projectToChange= await Project.findOne({ projectId })
@@ -619,7 +619,7 @@ app.patch("/project-board/projects/:projectId", async (req, res) => {
       // const guestListupdate = req.body.guestList
       // const nameUpdate = req.body.name
       const updatedProject = await Project.findByIdAndUpdate({ _id: projectId}, { $push:{
-        guestList: guestList},  $set: {name: name, due_date: due_date} })
+        guestList: new Guest({ guestName, phone })},  $set: {name: name, due_date: due_date} })
         res.status(200).json({
         response: "Updated",
         data: updatedProject
